@@ -6,6 +6,7 @@
 /out-tsc
 /bazel-out
 .vscode/
+public/
 
 # Node
 /node_modules
