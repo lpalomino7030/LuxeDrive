@@ -1,14 +1,41 @@
-<div>
-    <h1>LuxeDrive</h1>
+<!-- <nav class="navigation">
+    <h1 class="titulo">LuxeDrive</h1>
 
-    <ul>
-        <li>Home</li>
-        <li>Alqiler</li>
-        <li>Compra</li>
-        <li>Servicios</li>
+    <ul class="navlinks">
+        <li>
+           <a href=""> Home </a></li>
+        <li>
+            <a href=""> Alqiler </a>
+        </li>
+        <li>
+            <a href=""> Compra </a>
+        </li>
+        <li>
+            <a href=""> Servicios </a>
+        </li>
     </ul>
 
-    <!-- buscar -->
 
     <div>Login</div>
-</div>
+</nav> -->
+
+
+<nav class="fixed top-0 z-50 w-full bg-primary-container border-b border-outline-variant shadow-md">
+    <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+        <div class="font-headline-md text-headline-md font-bold text-primary">LuxeDrive</div>
+        <div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+            <a class="text-primary border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200"
+                href="#">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Comprar</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Alquilar</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Nosotros</a>
+        </div>
+        <div class="flex items-center gap-6">
+            <button class="hidden lg:flex items-center text-on-surface-variant hover:text-primary">
+                <span class="material-symbols-outlined mr-2">search</span>
+            </button>
+            <button
+                class="px-6 py-2 bg-primary text-on-primary font-label-md rounded-lg scale-95 active:scale-90 transition-transform">Login</button>
+        </div>
+    </div>
+</nav>
