@@ -3,6 +3,6 @@
   <component name="DataSourcePerFileMappings">
     <file url="file://$PROJECT_DIR$/ms-autos/database/BdAutos.sql" value="420cd43c-481e-402d-86cf-eb5601f6ed83" />
     <file url="file://$PROJECT_DIR$/ms-clientes/database/DbClientes.sql" value="420cd43c-481e-402d-86cf-eb5601f6ed83" />
-    <file url="file://$PROJECT_DIR$/ms-ventas/database/DbClientes.sql" value="420cd43c-481e-402d-86cf-eb5601f6ed83" />
+    <file url="file://$PROJECT_DIR$/ms-ventas/database/DbVentas.sql" value="420cd43c-481e-402d-86cf-eb5601f6ed83" />
   </component>
 </project>
