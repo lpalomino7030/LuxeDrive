@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LuxeDriveRun" type="CompoundRunConfigurationType">
+    <toRun name="EurekaserverApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="GatewayApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="MsAutosApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="MsClientesApplication" type="SpringBootApplicationConfigurationType" />
+    <toRun name="MsVentasApplication" type="SpringBootApplicationConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>
