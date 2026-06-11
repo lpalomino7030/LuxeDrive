@@ -1,6 +1,8 @@
 package com.cibertec.msventas.dto;
 
-public class AutoResponse {
-
-
-}
+public record AutoResponse(
+        Long idAutos,
+        String marca,
+        String modelo,
+        String placa
+) { }

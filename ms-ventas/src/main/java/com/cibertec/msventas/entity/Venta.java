@@ -32,6 +32,10 @@ private String descripcion;
         this.descripcion = descripcion;
     }
 
+    public Venta() {
+
+    }
+
     public Long getIdVentas() {
         return idVentas;
     }
