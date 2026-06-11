@@ -1,2 +1,10 @@
 Create database Autos;
 
+CREATE TABLE AUTOS (
+   idAutos SERIAL NOT NULL,
+   marca VARCHAR(50) NOT NULL,
+   modelo VARCHAR(50) NOT NULL,
+   placa VARCHAR(15) NOT NULL UNIQUE,
+   CONSTRAINT PK_AUTOS PRIMARY KEY (idAutos)
+);
+
