@@ -10,6 +10,8 @@ import com.cibertec.msventas.entity.Venta;
 import com.cibertec.msventas.repository.VentaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class VentaService {
 
@@ -48,7 +50,50 @@ public class VentaService {
 
     }
 
+    public VentaResponse ObtenerVentaId (Long Id){
+        Venta venta = ventaRepository.findById(Id).orElseThrow(
+                () -> new RuntimeException(
+                        "Venta no encontrada"
+                )
+        );
 
+        ClienteResponse cliente = clienteFeignClient.obtenerCliente(venta.getIdClientes());
+
+        AutoResponse auto = autosFeignClient.obtenerAuto(venta.getIdAutos());
+
+        return new VentaResponse(
+                venta.getIdVentas(),
+                cliente,
+                auto,
+                venta.getFechaVenta(),
+                venta.getPrecioVenta(),
+                venta.getDescripcion()
+        );
+    }
+
+    public List<VentaResponse> listarVentas(){
+        List<Venta> ventas =  ventaRepository.findAll();
+
+        return ventas.stream()
+                .map(
+                venta -> {
+                    ClienteResponse cliente =
+                            clienteFeignClient.obtenerCliente(
+                                    venta.getIdClientes()
+                            );
+                    AutoResponse auto = autosFeignClient.obtenerAuto(venta.getIdAutos());
+
+                return new VentaResponse(
+                        venta.getIdVentas(),
+                        cliente,
+                        auto,
+                        venta.getFechaVenta(),
+                        venta.getPrecioVenta(),
+                        venta.getDescripcion()
+
+                );
+                }).toList();
+    }
 
 
 }
