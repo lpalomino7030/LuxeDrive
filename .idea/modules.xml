@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DAW.iml" filepath="$PROJECT_DIR$/.idea/DAW.iml" />
       <module fileurl="file://$PROJECT_DIR$/ms-autos/ms-autos.iml" filepath="$PROJECT_DIR$/ms-autos/ms-autos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms-clientes/ms-clientes.iml" filepath="$PROJECT_DIR$/ms-clientes/ms-clientes.iml" />
     </modules>
   </component>
 </project>
