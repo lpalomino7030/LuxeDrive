@@ -21,17 +21,10 @@ private final PasswordEncoder passwordEncoder;
     public void init(){
     if(repository.findByUsername("admin").isEmpty()){
         Usuario user = new Usuario();
-
         user.setUsername("admin");
-        user.setPassword(
-                passwordEncoder.encode("123456")
-        );
+        user.setPassword(passwordEncoder.encode("123456"));
         user.setRol("ADMIN");
-
         repository.save(user);
-
-
     }
     }
-
 }

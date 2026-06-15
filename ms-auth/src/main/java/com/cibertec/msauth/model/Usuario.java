@@ -1,20 +1,14 @@
 package com.cibertec.msauth.model;
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String username;
-
     private String password;
-
     private String rol;
 
     public Usuario() {

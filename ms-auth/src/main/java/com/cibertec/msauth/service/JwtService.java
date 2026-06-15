@@ -12,11 +12,10 @@ import java.util.Date;
 public class JwtService {
     @Value("${jwt.secret}")
     private String secret;
-
     @Value("${jwt.expiration}")
     private long expiration;
 
-public String generateToken(String username){
+    public String generateToken(String username){
     SecretKey key = Keys.hmacShaKeyFor(secret.getBytes());
 
     return Jwts.builder()
@@ -26,10 +25,45 @@ public String generateToken(String username){
                     new Date(
                             System.currentTimeMillis() + expiration
                     )
-
             )
             .signWith(key)
             .compact();
 }
+
+    public boolean validateToken(String token){
+
+        try {
+
+            SecretKey key =
+                    Keys.hmacShaKeyFor(
+                            secret.getBytes()
+                    );
+
+            Jwts.parser()
+                    .verifyWith(key)
+                    .build()
+                    .parseSignedClaims(token);
+
+            return true;
+
+        } catch (Exception e){
+            return false;
+        }
+    }
+
+    public String extractUsername(String token){
+
+        SecretKey key =
+                Keys.hmacShaKeyFor(
+                        secret.getBytes()
+                );
+
+        return Jwts.parser()
+                .verifyWith(key)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .getSubject();
+    }
 
 }
