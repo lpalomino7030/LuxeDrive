@@ -12,19 +12,19 @@ import org.springframework.web.bind.annotation.*;
         import java.util.List;
 
 @RestController
-@RequestMapping("/api/clientes") // URL base para este microservicio
+@RequestMapping("/clientes") // URL base para este microservicio
 public class ClientesControler {
 
     @Autowired
     private ClienteService clienteService;
 
-    // GET: http://localhost:8080/api/clientes
+    // GET: http://localhost:8080/clientes
     @GetMapping
     public List<Clientes> listar() {
         return clienteService.listarTodos();
     }
 
-    // GET por ID: http://localhost:8080/api/clientes/{id}
+    // GET por ID: http://localhost:8080/clientes/{id}
     @GetMapping("/{id}")
     public ResponseEntity<Clientes> buscarPorId(@PathVariable Long id) {
         return clienteService.buscarPorId(id)
@@ -32,13 +32,13 @@ public class ClientesControler {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // POST: http://localhost:8080/api/clientes
+    // POST: http://localhost:8080/clientes
     @PostMapping
     public Clientes crear(@RequestBody Clientes cliente) {
         return clienteService.guardar(cliente);
     }
 
-    // DELETE: http://localhost:8080/api/clientes/{id}
+    // DELETE: http://localhost:8080/clientes/{id}
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         clienteService.eliminar(id);

@@ -4,3 +4,6 @@
      password VARCHAR(255),
      rol VARCHAR(20)
     );
+
+SELECT * FROM usuarios;
+

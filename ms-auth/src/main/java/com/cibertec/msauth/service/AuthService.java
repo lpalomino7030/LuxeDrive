@@ -26,7 +26,11 @@ public class AuthService {
             String rol
     ) {
         Usuario usuario = new Usuario();
-
+        if(authRepository.findByUsername(username).isPresent()){
+            throw new RuntimeException(
+                    "El usuario ya existe"
+            );
+        }
         usuario.setUsername(username);
         usuario.setPassword(
                 passwordEncoder.encode(password)
