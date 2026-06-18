@@ -30,9 +30,16 @@ export class Login {
     this.http.post<any>('http://localhost:8080/auth/login', body).subscribe({
       next: (response) => {
         localStorage.setItem('token', response.token);
+        localStorage.setItem('rol', response.rol);
 
         alert('Login correcto');
-        this.router.navigate(['/sales']);
+
+        if (response.rol === 'ADMIN') {
+          this.router.navigate(['/dashboard']);
+        } else {
+          this.router.navigate(['/cliente']);
+        }
+
       },
 
       error: (err) => {
