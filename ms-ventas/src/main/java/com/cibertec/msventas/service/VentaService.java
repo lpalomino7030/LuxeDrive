@@ -9,6 +9,7 @@ import com.cibertec.msventas.dto.VentaResponse;
 import com.cibertec.msventas.entity.Venta;
 import com.cibertec.msventas.repository.VentaRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -95,5 +96,27 @@ public class VentaService {
                 }).toList();
     }
 
+    public VentaResponse  EditarVenta(@RequestParam Long Id, VentaRequest request){
+        Venta venta = ventaRepository.findById(Id)
+                .orElseThrow( () -> new RuntimeException("Venta no encontrada0"));
 
+        venta.setIdClientes(request.idClientes());
+        venta.setIdAutos(request.idAutos());
+        venta.setFechaVenta(request.fechaVenta());
+        venta.setPrecioVenta(request.precioVenta());
+        venta.setDescripcion(request.descripcion());
+
+        Venta ventaActualizada = ventaRepository.save(venta);
+        ClienteResponse cliente = clienteFeignClient.obtenerCliente(ventaActualizada.getIdClientes());
+        AutoResponse auto = autosFeignClient.obtenerAuto(ventaActualizada.getIdAutos());
+
+        return new VentaResponse(
+                ventaActualizada.getIdVentas(),
+                cliente,
+                auto,
+                ventaActualizada.getFechaVenta(),
+                ventaActualizada.getPrecioVenta(),
+                ventaActualizada.getDescripcion()
+        );
+    }
 }
