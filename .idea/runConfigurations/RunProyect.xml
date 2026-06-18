@@ -1,5 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="RunProyect" type="CompoundRunConfigurationType">
+    <toRun name="start" type="js.build_tools.npm" />
     <toRun name="auth" type="SpringBootApplicationConfigurationType" />
     <toRun name="autos" type="SpringBootApplicationConfigurationType" />
     <toRun name="clientes" type="SpringBootApplicationConfigurationType" />

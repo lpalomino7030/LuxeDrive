@@ -2,6 +2,7 @@ package com.cibertec.gateway.config;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -23,6 +24,9 @@ public class JwtAuthenticationFilter implements GlobalFilter {
             ServerWebExchange exchange,
             GatewayFilterChain chain
     ) {
+        if (exchange.getRequest().getMethod() == HttpMethod.OPTIONS) {
+            return chain.filter(exchange);
+        }
 
         String path =
                 exchange.getRequest()
