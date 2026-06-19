@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -29,10 +30,24 @@ export class Login {
 
     this.http.post<any>('http://localhost:8080/auth/login', body).subscribe({
       next: (response) => {
-        localStorage.setItem('token', response.token);
+        const token = response.token;
+        localStorage.setItem('token', token);
+
+        const decoded: any = jwtDecode(token);
+
+        const userRol = decoded.rol;
+        console.log(decoded);
+
+        localStorage.setItem('rol', userRol);
 
         alert('Login correcto');
-        this.router.navigate(['/sales']);
+
+        if (userRol === 'ADMIN' || "admin") {
+          this.router.navigate(['/dashboard']);
+        } else {
+          this.router.navigate(['/perfil']);
+        }
+
       },
 
       error: (err) => {

@@ -5,15 +5,14 @@ CREATE TABLE AUTOS (
     marca VARCHAR(50) NOT NULL,
     modelo VARCHAR(50) NOT NULL,
     placa VARCHAR(15) NOT NULL UNIQUE,
+    anio INTEGER,
+    precio NUMERIC(10,2) NOT NULL ,
+    color VARCHAR(30) NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    estado VARCHAR(30) NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
     CONSTRAINT PK_AUTOS PRIMARY KEY (idAutos));
 
-ALTER TABLE autos
-    ADD COLUMN anio INTEGER,
-    ADD COLUMN precio NUMERIC(10,2),
-    ADD COLUMN color VARCHAR(30),
-    ADD COLUMN tipo VARCHAR(50),
-    ADD COLUMN estado VARCHAR(30),
-    ADD COLUMN imagen VARCHAR(255);
 
 
 
