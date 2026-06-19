@@ -7,6 +7,9 @@ import com.cibertec.msauth.repository.AuthRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 public class AuthService {
 
@@ -51,6 +54,8 @@ public class AuthService {
                                 )
                         );
 
+
+
         boolean passwordValido =
                 passwordEncoder.matches(
                         request.getPassword(),
@@ -63,9 +68,14 @@ public class AuthService {
             );
         }
 
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("rol", usuario.getRol());
+
         String token =
                 jwtService.generateToken(
+                        claims,
                         usuario.getUsername()
+
                 );
 
         return new LoginResponse(token);

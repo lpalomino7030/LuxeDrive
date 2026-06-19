@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../../login/auth-service';
 
 @Component({
   selector: 'app-panel',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './panel.html',
   styleUrl: './panel.css',
 })
-export class Panel {}
+export class Panel {
+  constructor(private authService: AuthService) {}
+
+  get username(): string {
+    return this.authService.getUsername();
+  }
+}

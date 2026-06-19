@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {Panel} from './panel/panel';
+import { HeaderClient } from './header-client/header-client';
 
 
 @Component({
   selector: 'app-client',
-  imports: [Panel, RouterOutlet],
+  imports: [Panel, RouterOutlet, HeaderClient],
   templateUrl: './client.html',
   styleUrl: './client.css',
 })

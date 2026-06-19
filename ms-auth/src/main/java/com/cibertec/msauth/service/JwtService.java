@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
+import java.util.Map;
 
 @Service
 public class JwtService {
@@ -15,10 +16,10 @@ public class JwtService {
     @Value("${jwt.expiration}")
     private long expiration;
 
-    public String generateToken(String username){
+    public String generateToken(Map<String, Object> claims, String username){
     SecretKey key = Keys.hmacShaKeyFor(secret.getBytes());
 
-    return Jwts.builder()
+    return Jwts.builder().claims(claims)
             .subject(username)
             .issuedAt(new Date())
             .expiration(

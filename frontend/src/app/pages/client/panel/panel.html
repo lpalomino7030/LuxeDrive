@@ -1,1 +1,202 @@
-<p>panel works!</p>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 space-y-16">
+  <!-- Hero Section: Welcome Back -->
+  <section class="relative overflow-hidden rounded-3xl h-80 flex items-center px-12 bg-surface-container-low border border-outline-variant">
+    <div class="absolute inset-0 z-0">
+
+    </div>
+    <div class="relative z-10 space-y-4">
+      <h1 class="font-display-lg text-headline-lg md:text-display-lg text-on-background">Bienvenido, <span class="text-primary"> {{username}} </span></h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Tu flota personal te espera. Revisa tus reservas actuales o explora nuevas incorporaciones exclusivas a nuestra colección.</p>
+      <div class="flex gap-4 pt-4">
+        <button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:brightness-110 active:scale-95 transition-all">Ver Inventario</button>
+        <button class="border border-primary text-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary/10 active:scale-95 transition-all">Solicitar Concierge</button>
+      </div>
+    </div>
+    <!-- Decorative car element -->
+    <div class="absolute right-[-10%] bottom-[-20%] w-1/2 hidden lg:block opacity-40">
+      <img class="w-full object-contain" data-alt="A side-profile shot of a silver high-performance electric luxury sedan, reflecting studio lights in a dark, atmospheric environment. The car's sleek aerodynamic lines are emphasized by sharp highlights. The mood is technical, precise, and high-end, fitting the LuxeDrive brand identity with slate and electric blue undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA49Kgk8hx4dOkbgO8v_8ulpiInUvgRRIQSBg74J5vNJBQlqQi4Tc05UyhEBQMWhFcSWOVcRqYj0kXkMhD1mpOsgLQ-j52lpKY6LrtTSdC2xNmQauY-WtI_QkCEmbwdczTBZmDMagbsxGrCHmU67ejP-0RKvad5QWgLish4zq4WRA5Yl9x1rfupamXMYlBWE4mt9DaQxLLGx0A7LTu_GlLTzVP6qV3zVrmowHH3vMXIzTpJ9UeUaDxXy1TOh7sCy1psH0lrWsX1otuc"/>
+    </div>
+  </section>
+  <!-- Main Bento Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+    <!-- My Reserved Vehicles (2/3 width) -->
+    <div class="lg:col-span-2 space-y-6">
+      <div class="flex items-center justify-between">
+        <h2 class="font-headline-md text-headline-md text-primary">Mis Vehículos Reservados</h2>
+        <a class="text-tertiary text-label-md font-label-md flex items-center gap-1 hover:underline" href="#">Ver todos <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- Reserved Card 1 -->
+        <div class="glass-card rounded-xl overflow-hidden bento-item group">
+          <div class="h-48 relative">
+            <img class="w-full h-full object-cover" data-alt="A wide-angle front-quarter shot of a deep metallic blue luxury GT coupe parked in a minimalist, modern garage with polished concrete floors and linear LED lighting. The image captures the vehicle's aggressive front grille and intricate wheel design. The lighting is cool and sophisticated, creating a high-performance luxury feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs6CyYvxx83SY20TDVHY2f4x5_UXRDe7tc6R359n2CmyeEGW8USvY9q_nZzb6t3exmHzPMbgtP3bxn1bGALzL6l8W3Eb9_Mp-4AGSEoiue6V9QaDm8JluvN2p2p84E_RcFHIDHx-zTbAijHyrguYfVwg7_hpzNHbSgNzF73-qRLS98iPicRJlQ8McFC-fFYgvPBlE6QvNRXq6cXnVkdNxsYTTqxdOD0Lw8CLM8SZGXspXSnRWReH28xcp3noVit8lq7QHr6WVk-RP2"/>
+            <span class="absolute top-4 left-4 bg-tertiary-container text-tertiary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">En Alquiler</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface">Grand Tourer S</h3>
+                <p class="text-on-surface-variant font-body-md text-body-md">Entrega: 12 Nov - 18 Nov</p>
+              </div>
+              <span class="text-tertiary font-headline-md text-headline-md">$1,200/día</span>
+            </div>
+            <div class="flex justify-between border-t border-outline-variant pt-4">
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined">bolt</span>
+                <span class="text-label-md font-label-md">650 HP</span>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined">timer</span>
+                <span class="text-label-md font-label-md">3.2s (0-100)</span>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined">chair</span>
+                <span class="text-label-md font-label-md">4 Plazas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Reserved Card 2 -->
+        <div class="glass-card rounded-xl overflow-hidden bento-item group">
+          <div class="h-48 relative">
+            <img class="w-full h-full object-cover" data-alt="A close-up shot of a white high-end luxury SUV, focusing on the headlight and front fender. The car is situated in a high-tech showroom with blue atmospheric lighting. The image highlights the texture of the metallic paint and the precision of the engineering. The atmosphere is clean, modern, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCihmAGzBnZk2bU5ByUxXGwRBJn-rn8MedaXhX7phMIqU8iv1rWYoArSEzhFEEuEDdnBejy5wJa4bmAasV5138FlzB4i9BicMyh1TcgJz_Y7fZCbaVumB24wcwxS_EuIMF_0BMNUhohmoxy9AzJO4QKt5BqBtr_ACTMyrTkHN5PQ2NWq-8K59WjiFQJ_XjTnroSjGZ0p8rwlGuSBUfa7woZNVIIrcltMgjUOZMg2-XWdWBTyw4Z08FuSuKmR73OSSSNY8KlM9SZ21Bm"/>
+            <span class="absolute top-4 left-4 bg-primary-container text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Prueba de Manejo</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-headline-md text-headline-md text-on-surface">Dominus SUV V12</h3>
+                <p class="text-on-surface-variant font-body-md text-body-md">Visita: Mañana, 10:30 AM</p>
+              </div>
+              <span class="text-primary font-headline-md text-headline-md">Showroom</span>
+            </div>
+            <div class="flex justify-between border-t border-outline-variant pt-4">
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined">bolt</span>
+                <span class="text-label-md font-label-md">720 HP</span>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined">timer</span>
+                <span class="text-label-md font-label-md">4.1s (0-100)</span>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface-variant">
+                <span class="material-symbols-outlined">chair</span>
+                <span class="text-label-md font-label-md">7 Plazas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Personal Consultant (1/3 width) -->
+    <div class="space-y-6">
+      <h2 class="font-headline-md text-headline-md text-primary">Asesor Personal</h2>
+      <div class="glass-card rounded-xl p-8 flex flex-col items-center text-center space-y-6 bento-item">
+        <div class="relative">
+          <div class="w-32 h-32 rounded-full border-4 border-primary p-1">
+            <img class="w-full h-full object-cover rounded-full" data-alt="A professional headshot of a luxury automotive consultant, a woman in her late 30s with a confident and welcoming expression. She is dressed in a charcoal gray business blazer. The lighting is soft and high-key, with a clean architectural background that suggests a premium corporate office. The overall feel is one of reliability, technical expertise, and luxury service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwGq-HSYrETQHAr_vnPtu0Wsp6OxYlkp7gLyAagc-72PvxCOJtDqmkdr-0oh4e3Lefzh7_7Th6mrsMOEAEBJSiGSHMZ8cGvUNE_ChJgkx0VgjX0q20g1CffpuefJIUjqvkSMkYbDHLKo27IYMZYDh7mBroLPilBSinj1iMv0iX9G91bS-n_gw7BEhq7EfBmiqqKAPlU9MOl7JtgGZXq69u-x96w8jEx1MA_vAT3XHcg1bFgZz3OXPk0tA64EA5q28qMunt3n5O5cAl"/>
+          </div>
+          <div class="absolute bottom-0 right-2 w-6 h-6 bg-green-500 border-4 border-surface-container-low rounded-full"></div>
+        </div>
+        <div>
+          <h3 class="font-headline-md text-headline-md text-on-surface">Sofia Valenzuela</h3>
+          <p class="text-on-surface-variant font-label-md text-label-md">Especialista en Flota VIP</p>
+        </div>
+        <div class="w-full space-y-3">
+          <button class="w-full bg-primary text-on-primary py-3 rounded-lg flex items-center justify-center gap-2 font-label-md hover:brightness-110 transition-all">
+            <span class="material-symbols-outlined">chat</span> Chat Directo
+          </button>
+          <button class="w-full border border-outline-variant text-on-surface py-3 rounded-lg flex items-center justify-center gap-2 font-label-md hover:bg-surface-container-highest transition-all">
+            <span class="material-symbols-outlined">calendar_today</span> Agendar Cita
+          </button>
+        </div>
+        <p class="text-on-surface-variant text-xs leading-relaxed">"Hola Alejandro, estoy aquí para asegurar que tu experiencia con LuxeDrive sea impecable. ¿Tienes alguna pregunta sobre el Dominus SUV?"</p>
+      </div>
+    </div>
+  </div>
+  <!-- Appointment History & Favorites -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+    <!-- Appointment History -->
+    <div class="space-y-6">
+      <h2 class="font-headline-md text-headline-md text-primary">Historial de Citas</h2>
+      <div class="glass-card rounded-xl overflow-hidden">
+        <table class="w-full text-left">
+          <thead class="bg-surface-container-high text-on-surface-variant">
+          <tr>
+            <th class="px-6 py-4 font-label-md text-label-md">Vehículo</th>
+            <th class="px-6 py-4 font-label-md text-label-md">Fecha</th>
+            <th class="px-6 py-4 font-label-md text-label-md">Estado</th>
+            <th class="px-6 py-4 font-label-md text-label-md"></th>
+          </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant">
+          <tr class="hover:bg-surface-container-highest transition-colors">
+            <td class="px-6 py-4 font-body-md text-on-surface">Stealth Edition Roadster</td>
+            <td class="px-6 py-4 font-body-md text-on-surface-variant">24 Oct, 2024</td>
+            <td class="px-6 py-4">
+              <span class="bg-green-900/30 text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Completado</span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button class="material-symbols-outlined text-on-surface-variant">more_vert</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-surface-container-highest transition-colors">
+            <td class="px-6 py-4 font-body-md text-on-surface">Dominus SUV V12</td>
+            <td class="px-6 py-4 font-body-md text-on-surface-variant">Próxima: Mañana</td>
+            <td class="px-6 py-4">
+              <span class="bg-primary-container text-primary px-3 py-1 rounded-full text-xs font-bold uppercase">Confirmado</span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button class="material-symbols-outlined text-on-surface-variant">more_vert</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-surface-container-highest transition-colors">
+            <td class="px-6 py-4 font-body-md text-on-surface">Apex Hypercar</td>
+            <td class="px-6 py-4 font-body-md text-on-surface-variant">15 Sep, 2024</td>
+            <td class="px-6 py-4">
+              <span class="bg-green-900/30 text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase">Completado</span>
+            </td>
+            <td class="px-6 py-4 text-right">
+              <button class="material-symbols-outlined text-on-surface-variant">more_vert</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Favorites / Wishlist -->
+    <div class="space-y-6">
+      <h2 class="font-headline-md text-headline-md text-primary">Favoritos / Wishlist</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Fav 1 -->
+        <div class="bg-surface-container rounded-xl p-4 flex gap-4 border border-outline-variant hover:border-primary transition-all cursor-pointer group">
+          <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A tight close-up shot of the emblem and front grille of a black high-end exotic sports car. The lighting focuses on the metallic sheen and the carbon fiber textures. Dark, sleek, and high-contrast styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBd8C_V_roAk4s57cyQug51xL3MycrWJS-6LIA0OKVJYfX23lgafB7y7D2doa_vj7C6GxRQmc0U7SOkJvB4wUlwoFtfX97ti62z-nizJOzND3yiqyuggfKPJVdnwn7zhQIWPTYDhWS_rcU3qJyJohHHF561aSmbrIRnxzK1-g_4JTqWU1XHEoCstTjyS54qikzGvgYJEvcImxFi6CFKcV5-JPG9WSkwxrs_JilieJjiIzXzsvYObM8kpsctKXqUVD9ZPJWLmq2rz_Y"/>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h4 class="font-headline-md text-label-md text-on-surface">Apex Hypercar</h4>
+            <p class="text-primary font-label-md text-xs">$3,500/día</p>
+            <button class="text-tertiary text-[10px] uppercase font-bold tracking-widest mt-2 flex items-center gap-1">Ver detalles <span class="material-symbols-outlined text-[12px]">open_in_new</span></button>
+          </div>
+        </div>
+        <!-- Fav 2 -->
+        <div class="bg-surface-container rounded-xl p-4 flex gap-4 border border-outline-variant hover:border-primary transition-all cursor-pointer group">
+          <div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A rear view of a luxury convertible sports car driving through a misty mountain pass at dusk. The tail lights are glowing bright red against the dark grey tones of the landscape. Editorial automotive photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVrsna5ZGYJPBd2EioiXWS0geDNXU1Kx_SZv3ur5yhfLmDna1t0e3H0wuC7BlSQqwBYiEdHj5P7HYO1P_GeuaDuJFAtE-Q5lpRgXoia3PdB5VH2oDttRvhcFCxQLGPUhOTA7189s65wTys-3f7dbb-s6qXES0YpEFiZ45P-qUw8YumuGGpMt5dXxZOzgIx86apFKRXw45NTv-G4soUP5JqEr1TBlDBktuZaJJPv4Z9VlOk1hjVsReyNvxktJ-9loDbD9ZoAT0Vv0El"/>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h4 class="font-headline-md text-label-md text-on-surface">Horizon Cabriolet</h4>
+            <p class="text-primary font-label-md text-xs">$950/día</p>
+            <button class="text-tertiary text-[10px] uppercase font-bold tracking-widest mt-2 flex items-center gap-1">Ver detalles <span class="material-symbols-outlined text-[12px]">open_in_new</span></button>
+          </div>
+        </div>
+        <!-- Add more fav link -->
+        <div class="md:col-span-2 border-2 border-dashed border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all cursor-pointer group">
+          <span class="material-symbols-outlined text-3xl mb-2 group-hover:rotate-90 transition-transform">add_circle</span>
+          <p class="font-label-md text-label-md">Explorar más vehiculos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Footer -->
