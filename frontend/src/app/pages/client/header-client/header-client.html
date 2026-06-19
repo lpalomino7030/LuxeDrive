@@ -1,0 +1,27 @@
+<nav class="w-full top-0 sticky z-50 bg-surface-container-low border-b border-outline-variant shadow-sm flex items-center justify-between px-margin-desktop py-4 w-full">
+  <div class="flex items-center gap-12">
+    <span class="font-display-lg text-headline-md tracking-tighter text-primary uppercase">LuxeDrive</span>
+    <div class="hidden md:flex gap-8 items-center h-full">
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Inventory</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Fleet</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Concierge</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Financing</a>
+    </div>
+  </div>
+  <div class="flex items-center gap-6">
+    <div class="hidden lg:flex items-center bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant group">
+      <span class="material-symbols-outlined text-on-surface-variant mr-2">search</span>
+      <input class="bg-transparent border-none focus:ring-0 text-label-md w-48 text-on-surface placeholder:text-on-surface-variant" placeholder="Buscar vehiculo..." type="text"/>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+      <button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">settings</button>
+      <div class="w-10 h-10 rounded-full overflow-hidden border border-outline cursor-pointer active:scale-95 transition-transform">
+        <img class="w-full h-full object-cover" data-alt="A sophisticated close-up portrait of a professional male client in his 40s wearing a high-end tailored suit. The lighting is dramatic and moody, characteristic of a luxury automotive brand, with cool blue and slate tones. The background is a blurred high-tech showroom environment, emphasizing a premium and exclusive atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADwFwSyKV8d0iXdIZ5h7m6VAJ1l7flUbcTgGV71G8LyxHn_5as7JUVMbCjVnPO3nNsbLgaEnqaHcC6UCrQK-vM_KMQ7zkyhaF6HxMoms8F_nMCmzYU-JfleNF-Vy7WQNfyNySgEtMXIKvcdeUU9dY8XeB1lCCBATAqcZTLrocW_YdigErbWMHtyhu4szST0xIhPsGuMzzrKBl9guDfrwMG4KL8iwm1dn_mU8Wd_J6gLeXaEL_J44pinvHvbfiudmBEDE39Z3LXet8O"/>
+      </div>
+      <button (click)="cerrarSesion()">
+        Cerrar sesión
+      </button>
+    </div>
+  </div>
+</nav>
