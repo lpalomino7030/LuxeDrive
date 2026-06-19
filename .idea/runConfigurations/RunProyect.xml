@@ -1,11 +1,12 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="RunProyect" type="CompoundRunConfigurationType">
-    <toRun name="eureka" type="Application" />
-    <toRun name="gateway" type="Application" />
-    <toRun name="msautos" type="Application" />
-    <toRun name="msclientes" type="Application" />
-    <toRun name="msventas" type="Application" />
-    <toRun name="angular" type="js.build_tools.npm" />
+    <toRun name="start" type="js.build_tools.npm" />
+    <toRun name="auth" type="SpringBootApplicationConfigurationType" />
+    <toRun name="autos" type="SpringBootApplicationConfigurationType" />
+    <toRun name="clientes" type="SpringBootApplicationConfigurationType" />
+    <toRun name="eureka" type="SpringBootApplicationConfigurationType" />
+    <toRun name="gatawey" type="SpringBootApplicationConfigurationType" />
+    <toRun name="ventas" type="SpringBootApplicationConfigurationType" />
     <method v="2" />
   </configuration>
 </component>
