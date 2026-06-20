@@ -7,7 +7,7 @@ import { Rent } from './pages/public/rent/rent';
 import { Sales } from './pages/public/sales/sales';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Client } from './pages/client/client';
-import { Nosotros } from './pages/public/nosotros/nosotros';
+import { Nosotros } from './pages/public/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
 

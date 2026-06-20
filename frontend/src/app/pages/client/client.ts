@@ -6,7 +6,7 @@ import { HeaderClient } from './header-client/header-client';
 
 @Component({
   selector: 'app-client',
-  imports: [Panel, RouterOutlet, HeaderClient],
+  imports: [ RouterOutlet, HeaderClient],
   templateUrl: './client.html',
   styleUrl: './client.css',
 })
