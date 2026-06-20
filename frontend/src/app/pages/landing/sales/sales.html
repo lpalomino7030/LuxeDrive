@@ -1,0 +1,258 @@
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+
+    <!-- Breadcrumbs -->
+    <nav class="flex items-center gap-2 mb-8 text-on-surface-variant font-label-md">
+        <a class="hover:text-primary" href="#">Inventory</a>
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+        <a class="hover:text-primary" href="#">SUVs</a>
+        <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+        <span class="text-primary">Apex Horizon GT</span>
+    </nav>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <!-- Left Column: Gallery & Details -->
+        <div class="lg:col-span-8 space-y-12">
+            <!-- Main Gallery Section -->
+            <section>
+                <div class="relative group aspect-[16/9] overflow-hidden rounded-xl bg-surface-container mb-6">
+                    <img alt="Apex Horizon GT Premium SUV"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A high-performance luxury SUV in a deep metallic obsidian finish, parked in a minimalist architectural courtyard with sharp angles. The lighting is low-key with dramatic highlights catching the car's sleek aerodynamic lines. The atmosphere is sophisticated and quiet, emphasizing the technical precision and premium build quality of the vehicle against a dark, slate-grey background."
+                        id="main-vehicle-image" [src]="mainImage" />
+                    <div class="absolute bottom-6 right-6 flex gap-2">
+                        <button
+                            class="p-3 bg-primary-container/80 backdrop-blur-md rounded-full text-primary border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+                            <span class="material-symbols-outlined">fullscreen</span>
+                        </button>
+                        <button
+                            class="p-3 bg-primary-container/80 backdrop-blur-md rounded-full text-primary border border-outline-variant hover:bg-primary hover:text-on-primary transition-all">
+                            <span class="material-symbols-outlined">360</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 md:grid-cols-5 gap-4">
+                    <button
+                        class="aspect-square rounded-lg overflow-hidden border-2 border-primary ring-2 ring-primary/20"
+                        (click)="updateMainImage(image1)">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Close up of the front profile of a black premium SUV showing LED matrix headlights."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcZXeK_Byjl-atTNBhC7gEu15RBFuipkODqwe24FoBzffiFKzrxWzlTjhaPHpIZ20iK0Kx-UzEc92_K2tlRPrYkDFgs1xU4LMmaAlOvQx5sdk4ih_owbFeMYIhOASLaDvjidF3lvvYfhIVb1yQyTacY5dbedYyfZ46q86vbbpF4AiaKYH23QhEF3-Krv_ekD3aGagkjIGh0Jc-BhS1XiVkoX4G-qFLmDOKdXk_dm9HO7m1DQ0rm2o_Hz5mLQVqcFZQrHBI8SYxkqR_" />
+                    </button>
+                    <button
+                        class="aspect-square rounded-lg overflow-hidden border border-outline-variant hover:border-primary transition-colors"
+                        (click)="updateMainImage(image2)">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Rear view of the vehicle showing integrated LED tail light bar and dual exhaust ports."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcRZ24xv7Yg_UVWoTFprKqv2T33uZzEFD6fuj73w_nMAUxskF5FcJVTOrhUANaBUZmUXXSlkzm2C43mu0w756bLJWz6V3daplPNeF3pfhgoEEzM5Mgor1asBHR34xyjtTSUuSAOwKLrNA8QFKv4v4SAcLAD92KouR6aqMU1r02nXgTF7smrRHayhqOo2Dz0jFhmqqmVO-_HupwmNxwLovWMHSylvOwOBVAKMobsrRxLB1sXmELysaXAY9pWdxNU6uonFE6xUaGFHtr" />
+                    </button>
+                    <button
+                        class="aspect-square rounded-lg overflow-hidden border border-outline-variant hover:border-primary transition-colors"
+                        (click)="updateMainImage(image3)">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Detailed interior shot of the luxury SUV cabin featuring diamond-quilted leather seats and carbon fiber trim."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBamxkhqsqm2NEEIpHCq65KCcDLEDBZ5Nb_HwghOA4WgrmbNfO__SxadJQ0IcVGsJfFPJk5SdSNzgx-uzlM19gd_KCzCKIqJzVGr3ZeLG2NAsQcUXq7y3OHzoUtCY282-5HX33NSHUBSKQDKUbDVsZVyDD9z9U9eUcmRws-lI65Xxupv2s19eVmJ40kRqWos3OQCjAiKRwM2ckXN54V5Ms0pzqXCwdM5pjigDPQ3s3mGlUAXL-oeBDYdAnjpfFJnIdQpBN05WjFTFUP" />
+                    </button>
+                    <button
+                        class="aspect-square rounded-lg overflow-hidden border border-outline-variant hover:border-primary transition-colors"
+                        (click)="updateMainImage(image4)">
+                        <img class="w-full h-full object-cover"
+                            data-alt="The steering wheel and digital dashboard cockpit of the car with ambient blue lighting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnbbfzZUk9hijHahLgFpDFMfoNF5zO9xt8sWkIwRzcmuDc0HrFpxDvuVmhxrEytz8JXORZVNeZ-O7Rq3MLxTJ4vHz6vkjTr071msaLODPzB71bh7Dzk0kXsBnehA37f-qOAgCg4RGP-u4vm7aPFqIBoHG9DGbbRrQOtVi72illDqW9YAY0PQizKDdpjUxOLD7NG8dWHN54dhLJpSTYT2uRtfZaVkYtTmjf6mV-K5r3s9ErRf3FEacewp00zeF2HBYxy9-f1XsgkHA" />
+                    </button>
+                    <button
+                        class="hidden md:flex aspect-square rounded-lg overflow-hidden border border-outline-variant hover:border-primary transition-colors items-center justify-center bg-surface-container relative">
+                        <img class="w-full h-full object-cover opacity-40"
+                            data-alt="Wide shot of the engine bay showcasing a clean, high-performance V8 engine block."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvIeBnkx2LoBpDtTXLRM8zcAeOS1X64xWmTNaf-zwuCmGOMhgW-1x8-AtHLTuI8cUIqtXfLvOj1QI12ESxm24tTqrdwXqasuWoO_P5ZrQbt0CHQVBuy3qfpWRcaM3Cb9pXf7ufv2pAd-ZrFFLxZ1DwUAN9UsI-Io753m9C6o88YmmuiSq-ka6mR6moW3P41DBLJoYwaUe2foMrnXjRPks_0AKpvV_RK1rsRqyUutSI7Nx4pSPQ9dmROBnZg-tRpq7dWFV58jAtAu8G" />
+                        <span class="absolute text-label-md font-bold">+12</span>
+                    </button>
+                </div>
+            </section>
+            <!-- Detailed Specs Section -->
+            <section class="space-y-8">
+                <h2 class="font-headline-lg text-headline-lg text-primary">Technical Performance</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-xl glass-card text-center space-y-2">
+                        <span class="material-symbols-outlined text-tertiary text-4xl"
+                            data-icon="settings_input_component">settings_input_component</span>
+                        <p class="text-on-surface-variant font-label-md">Engine</p>
+                        <p class="font-headline-md text-headline-md">4.0L V8 BiTurbo</p>
+                    </div>
+                    <div class="p-6 rounded-xl glass-card text-center space-y-2">
+                        <span class="material-symbols-outlined text-tertiary text-4xl" data-icon="bolt">bolt</span>
+                        <p class="text-on-surface-variant font-label-md">Horsepower</p>
+                        <p class="font-headline-md text-headline-md">650 HP</p>
+                    </div>
+                    <div class="p-6 rounded-xl glass-card text-center space-y-2">
+                        <span class="material-symbols-outlined text-tertiary text-4xl"
+                            data-icon="calendar_today">calendar_today</span>
+                        <p class="text-on-surface-variant font-label-md">Año</p>
+                        <p class="font-headline-md text-headline-md">2024</p>
+                    </div>
+                    <div class="p-6 rounded-xl glass-card text-center space-y-2">
+                        <span class="material-symbols-outlined text-tertiary text-4xl"
+                            data-icon="palette">palette</span>
+                        <p class="text-on-surface-variant font-label-md">Color</p>
+                        <p class="font-headline-md text-headline-md">Obsidian Black</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Premium Features</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div
+                            class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+                            <span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+                            <div>
+                                <p class="font-label-md">Advanced Safety Suite</p>
+                                <p class="text-body-md text-on-surface-variant">Level 3 autonomous driving and 360
+                                    collision detection.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="speaker_group">speaker_group</span>
+                            <div>
+                                <p class="font-label-md">Premium Audio</p>
+                                <p class="text-body-md text-on-surface-variant">24-speaker high-fidelity spatial sound
+                                    system.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+                            <span class="material-symbols-outlined text-primary" data-icon="air">air</span>
+                            <div>
+                                <p class="font-label-md">Active Air Suspension</p>
+                                <p class="text-body-md text-on-surface-variant">Adaptive ride height control for
+                                    all-terrain mastery.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="visibility">visibility</span>
+                            <div>
+                                <p class="font-label-md">Night Vision</p>
+                                <p class="text-body-md text-on-surface-variant">Infrared cameras for enhanced safety in
+                                    low visibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Right Column: Pricing & Sticky CTA -->
+        <div class="lg:col-span-4">
+            <div class="sticky top-32 space-y-6">
+                <div class="p-8 rounded-2xl glass-card border-primary/20 shadow-2xl">
+                    <div class="mb-6">
+                        <h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Apex Horizon GT</h1>
+                        <p class="text-on-surface-variant font-body-md">Grand Touring Premium SUV</p>
+                    </div>
+                    <div class="flex items-baseline gap-2 mb-8">
+                        <span class="text-tertiary font-display-lg text-[48px]">$184,900</span>
+                        <span class="text-on-surface-variant font-label-md">USD</span>
+                    </div>
+                    <div class="space-y-4">
+                        <button
+                            class="w-full bg-primary text-on-primary py-4 rounded-xl font-label-md text-lg hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-3">
+                            <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                            Solicitar Visita a Concesionaria
+                        </button>
+                        <button
+                            class="w-full border border-outline text-on-surface py-4 rounded-xl font-label-md hover:bg-surface-variant transition-all flex items-center justify-center gap-3">
+                            <span class="material-symbols-outlined" data-icon="finance">finance</span>
+                            Estimar Financiamiento
+                        </button>
+                    </div>
+                    <hr class="my-8 border-outline-variant" />
+                    <div class="space-y-4">
+                        <p class="font-label-md flex items-center gap-2">
+                            <span class="material-symbols-outlined text-tertiary"
+                                data-icon="location_on">location_on</span>
+                            Disponibilidad en Showroom Central
+                        </p>
+                        <p class="font-label-md flex items-center gap-2">
+                            <span class="material-symbols-outlined text-tertiary" data-icon="verified">verified</span>
+                            Garantía de 5 años o 100,000 km
+                        </p>
+                        <p class="font-label-md flex items-center gap-2">
+                            <span class="material-symbols-outlined text-tertiary" data-icon="cached">cached</span>
+                            Aceptamos tu vehículo actual
+                        </p>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-surface-container-high border border-outline-variant">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary"
+                                data-icon="support_agent">support_agent</span>
+                        </div>
+                        <div>
+                            <p class="font-label-md">Asesor de Ventas</p>
+                            <p class="text-body-md text-on-surface-variant">Hablamos ahora mismo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Secondary Section: Related Vehicles -->
+    <section class="mt-24 space-y-12">
+        <div class="flex justify-between items-end">
+            <div>
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Explora Alternativas</h2>
+                <p class="text-on-surface-variant font-body-lg">Otros SUVs de alto rendimiento en nuestra colección</p>
+            </div>
+            <button class="text-primary font-label-md flex items-center gap-2 group">
+                Ver todo el inventario
+                <span
+                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Related Card 1 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container mb-4 relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="A powerful charcoal gray luxury SUV parked on a mountain road at sunset. The lighting is warm and golden, highlighting the muscular curves of the car. The mood is adventurous and majestic, with a cinematic quality that speaks to cross-country travel and high-end engineering."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABbfue1em_wRPdY9P35NqeDrDp-9wCea9-ADkf5oQwCzO1yBCdbzcG3VO3ynZwwG1GA-R7DCQSQC4retL1SRaUjPg52PdKEzGQDc5poVXFA8xC1mBncNrAfjRJLMTiQ5pr2HbbGL9Yy8Oe2ZRhUgjFwB8dLHkiybN1UaAYd0rZnze_mybuQ5Y8dya7CTgqaR1DVpnpZS3NkUXl3fSZlxDUwwAlhK6uJmMUpMWPBQH3_px0dzaozlfRe4lzkaaNaPlOqpNLZK95kUni" />
+                    <div class="absolute top-4 right-4 px-3 py-1 bg-primary/90 text-on-primary rounded font-label-md">
+                        Nuevo</div>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-1">Vanguard Stealth X</h3>
+                <div class="flex justify-between items-center">
+                    <p class="text-on-surface-variant font-label-md">600 HP • 2024</p>
+                    <p class="text-tertiary font-headline-md">$152,000</p>
+                </div>
+            </div>
+            <!-- Related Card 2 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container mb-4 relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="A silver luxury SUV shown from a low angle on a wet city street at night. Neon signs reflect off the car's polished surface and the rain-slicked asphalt. The style is urban and moody, with a technical, high-tech feel created by the sharp contrasts and cold color temperatures."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC32nbIlZu8Yj9r8kf1KLHzsuXp3rx3PM8DDCKFMZIPuLOQja1HGMoIAEK_ZDKIFI3aRYlj9ycyWTSna8crQ0oAUal171SgO__EHxmcI3T6CMs9bgwULJxciquGLNmSiNmeboPmI6HBhwuoIgUGyTFVpLoqpqcMT76I--8xngVMSgcfF_OvOURbkLFlLUNWW4ql32B-lEm0MWPVKuPXiFvYukQKmj9WAnQxGEZtUotMzCKHQgE0GbnXY-aK1QfL-qfls7IbwWQ0HTOH" />
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-1">Summit Peak Elite</h3>
+                <div class="flex justify-between items-center">
+                    <p class="text-on-surface-variant font-label-md">520 HP • 2023</p>
+                    <p class="text-tertiary font-headline-md">$128,500</p>
+                </div>
+            </div>
+            <!-- Related Card 3 -->
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container mb-4 relative">
+                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-alt="A white flagship luxury SUV positioned in a brightly lit, sterile modern garage with a polished concrete floor. The lighting is even and commercial, highlighting the vehicle as a piece of pristine machinery. The palette is dominated by pure whites and subtle grays, evoking a sense of cleanliness, safety, and modern luxury."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcBkHo3yKH0XqBNYVMdJ5Xmm68IbRTDyGz6j0wHLjf19XEibPbY9U6jedE4QOOyVcoS0wgojlJCPmO1wOjANIgrWb9BVH_eRRTHU4gN9PvhXdN-3aFSnJg84ftzXAAx5RIEM-hEOyiCJYp-MVvLlgudUrT64IoYLxv1K2ZBzFlp4JCk1xCNTW8yZ7nwqswDm3qyTNJbuQCOKXaYKdZi01KoCVGUQYJHX7Al6ex8y0s95iaGuSUMWquGifhzlxMYKu1-DIKNC6XGc4c" />
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-1">Zenith Ultra SUV</h3>
+                <div class="flex justify-between items-center">
+                    <p class="text-on-surface-variant font-label-md">580 HP • 2024</p>
+                    <p class="text-tertiary font-headline-md">$165,000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
