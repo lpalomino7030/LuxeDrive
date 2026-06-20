@@ -1,12 +1,17 @@
-<nav class="fixed top-0 z-50 w-full bg-primary-container border-b border-outline-variant shadow-md">
-    <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<nav
+  class="fixed top-0 z-50 w-full transition-all duration-300"
+  [class.backdrop-blur-md]="isScrolled"
+  [class.border-b]="isScrolled"
+  [class]="isScrolled ? 'bg-black/70 border-white/10' : ''"
+>
+
+  <div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
         <div class="font-headline-md text-headline-md font-bold text-primary">LuxeDrive</div>
         <div class="hidden md:flex items-center gap-8 font-label-md text-label-md">
             <a class="text-primary border-primary pb-1 hover:text-primary transition-colors duration-200"
                 href="home">Home</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="sales">Comprar</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="rent">Alquilar</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="about">Nosotros</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/home/sales">Comprar</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/home/about">Nosotros</a>
         </div>
         <div class="flex items-center gap-6">
             <button class="hidden lg:flex items-center text-on-surface-variant hover:text-primary">

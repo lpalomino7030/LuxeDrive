@@ -10,6 +10,7 @@ import { Client } from './pages/client/client';
 import { Nosotros } from './pages/landing/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
+import {Catalogo} from './pages/landing/catalogo/catalogo';
 
 
 export const routes: Routes = [
@@ -24,13 +25,12 @@ export const routes: Routes = [
       { path: 'rent', component: Rent },
       { path: 'sales', component: Sales },
       { path: 'about', component: Nosotros },
+      { path: 'fleet', component: Catalogo },
     ],
   },
 
-  { path: 'dashboard', component: Dashboard,
-    children: [{ path: '', component: Contenido }] },
+  { path: 'dashboard', component: Dashboard, children: [{ path: '', component: Contenido }] },
 
-  { path: 'perfil', component: Client,
-    children: [{ path: '', component: Panel }] },
+  { path: 'perfil', component: Client, children: [{ path: '', component: Panel }] },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

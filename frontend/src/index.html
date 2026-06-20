@@ -133,7 +133,6 @@
     <app-root></app-root>
 
     <script>
-      // Smooth scroll implementation
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -143,7 +142,6 @@
         });
       });
 
-      // Simple reveal on scroll
       const observerOptions = {
         threshold: 0.1,
       };
@@ -161,6 +159,9 @@
         el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
         observer.observe(el);
       });
+
+
+
     </script>
   </body>
 </html>

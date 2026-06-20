@@ -1,11 +1,18 @@
-   <section class="relative h-screen flex items-center overflow-hidden">
+
+<section class="relative h-screen flex items-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover"
-                data-alt="A high-performance luxury sports car, a Porsche 911 GT3, positioned on a sleek coastal highway at dusk. The scene is illuminated by the warm, golden glow of the setting sun hitting the metallic silver body of the car, contrasting with deep blue ocean waves in the background. The mood is sophisticated and exhilarating, with cinematic lighting and a shallow depth of field highlighting the car's aerodynamic curves and technical precision."
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx-04_K6g9yEjrZ2FHkCoUAY39rIBxaVBO_Ctwgvxs9tTWv-0D959wTOHcRiHClpB9Kopp8AoHb4usL3AjEYMIZa94J9WDSH5rp_r1qIoWc9QPp-Po84RdqkeQdyvcf2oClXGPNysk91BmYCmK6R8O0VKN0qSPUYsQqVPnSpqE2fzbotkL_8hTmRCbh3Pjdr2ytXFLunQXpXC7VqWb3J1B9hQTQiQmPvg76TrOKsDO8KcxUu8cz7dJ8--c5lS9ph4mvne9J6IikTS1" />
-            <div class="absolute inset-0 hero-gradient"></div>
+          <video
+            class="w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            src="assets/auto.mp4">
+          </video>
+                <div class="absolute inset-0 hero-gradient"></div>
             <div class="absolute inset-0 bg-black/30"></div>
-        </div>
+
+           </div>
 
         <div class="relative z-10 w-full px-margin-desktop max-w-container-max mx-auto pt-20">
             <div class="max-w-3xl">
@@ -16,7 +23,7 @@
               <div class="flex gap-4 mb-12">
 
                 <a
-                  href="/sales"
+                  href="/home/sales"
                   class="bg-primary text-black px-8 py-4 rounded-lg font-bold">
                   Comprar Vehículos
                 </a>
@@ -28,46 +35,7 @@
                 </a>
 
               </div>
-                <!-- Advanced Search Bar -->
-                <div class="glass-panel p-2 rounded-xl flex flex-col md:flex-row gap-2 shadow-2xl">
-                    <div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-2">
-                        <div class="relative group">
-                            <span
-                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">directions_car</span>
-                            <select
-                                class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg pl-12 py-4 font-label-md text-on-surface appearance-none">
-                                <option>Seleccionar Tipo</option>
-                                <option>Carro deportivo</option>
-                                <option>Carro de lujo</option>
-                                <option>Carros a medida</option>
-                                <option>Carros eléctricos</option>
-                                <option>Carros clásicos</option>
-                            </select>
-                        </div>
-                        <div class="relative">
-                            <span
-                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">calendar_today</span>
-                            <input
-                                class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg pl-12 py-4 font-label-md text-on-surface placeholder:text-outline"
-                                placeholder="Pick-up Date" type="text" />
-                        </div>
-                        <div class="relative col-span-2 md:col-span-1">
-                            <span
-                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">sell</span>
-                            <select
-                                class="w-full bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg pl-12 py-4 font-label-md text-on-surface appearance-none">
-                                <!-- <option>Buy or Rent</option> -->
-                                <option>Comprar</option>
-                                <option>Alquilar</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button
-                        class="bg-primary text-on-primary-fixed px-10 py-4 rounded-lg font-label-md hover:brightness-110 transition-all flex items-center justify-center gap-2">
-                        <span class="material-symbols-outlined" data-weight="fill">bolt</span>
-                        BUSCAR FLOTA
-                    </button>
-                </div>
+
             </div>
         </div>
 </section>
@@ -98,14 +66,12 @@
      </div>
 
    </section>
-        <!-- Fleet Section -->
         <section class="py-24 px-margin-desktop max-w-container-max mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                 <div>
                     <h2 class="font-headline-lg text-headline-lg mb-4">Vehiculos Clasificados</h2>
                     <p class="font-body-md text-on-surface-variant max-w-md">Explore nuestra colección de vehículos de alto rendimiento.</p>
                 </div>
-                <!-- Filter Tabs -->
                 <div class="flex gap-4 p-1 bg-surface-container rounded-full">
                     <button
                         class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label-md">TODOS
@@ -118,9 +84,7 @@
                         class="px-6 py-2 hover:bg-surface-variant transition-colors rounded-full font-label-md text-on-surface-variant">Lamborghini</button>
                 </div>
             </div>
-            <!-- Bento Grid Layout for Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-                <!-- Card 1 -->
                 <div class="group bg-surface-container rounded-xl overflow-hidden border border-outline-variant hover:border-primary transition-all duration-300">
                     <div class="h-64 overflow-hidden relative">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -156,15 +120,14 @@
                                 <span class="font-label-md text-on-surface text-[12px]">2 Asientos</span>
                             </div>
                         </div>
-                        <button
-                            class="w-full py-3 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary hover:text-on-secondary transition-all flex justify-center items-center gap-2">
+                        <a
+                            class="w-full py-3 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary hover:text-on-secondary transition-all flex justify-center items-center gap-2" routerLink="/home/fleet">
                             MAS DETALLES
                             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div
                     class="group bg-surface-container rounded-xl overflow-hidden border border-outline-variant hover:border-primary transition-all duration-300">
                     <div class="h-64 overflow-hidden relative">
@@ -197,11 +160,11 @@
                                 <span class="font-label-md text-on-surface text-[12px]">4 Asientos</span>
                             </div>
                         </div>
-                        <button
-                            class="w-full py-3 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary hover:text-on-secondary transition-all flex justify-center items-center gap-2">
+                        <a
+                            class="w-full py-3 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary hover:text-on-secondary transition-all flex justify-center items-center gap-2" routerLink="/home/fleet">
                             MAS DETALLES
                             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <!-- Card 3 -->
@@ -237,23 +200,20 @@
                                 <span class="font-label-md text-on-surface text-[12px]">5 Asientos</span>
                             </div>
                         </div>
-                        <button
-                            class="w-full py-3 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary hover:text-on-secondary transition-all flex justify-center items-center gap-2">
+                        <a class="w-full py-3 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary hover:text-on-secondary transition-all flex justify-center items-center gap-2" routerLink="/home/fleet">
                             MAS DETALLES
                             <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!-- View More Button -->
             <div class="mt-16 text-center">
-                <button
-                    class="px-12 py-4 bg-surface-container-high text-on-surface border border-outline-variant rounded-lg font-label-md hover:border-primary transition-all">
-                    EXPLORAR CATALOGO</button>
+                <a
+                    class="px-12 py-4 bg-surface-container-high text-on-surface border border-outline-variant rounded-lg font-label-md hover:border-primary transition-all" routerLink="/home/fleet">
+                    EXPLORAR CATALOGO</a>
             </div>
         </section>
 
-        <!-- Services Section (Bento Grid) -->
         <section class="bg-surface-container-low py-24">
             <div class="px-margin-desktop max-w-container-max mx-auto">
                 <h2 class="font-headline-lg text-headline-lg mb-16 text-center">Mucho más que conducir</h2>
@@ -266,7 +226,7 @@
                         </div>
                         <div class="mt-8">
                             <a class="text-primary font-label-md flex items-center gap-2 group-hover:translate-x-2 transition-transform"
-                                href="#">CONOCER MAS <span class="material-symbols-outlined">chevron_right</span></a>
+                                href="/home/about">CONOCER MAS <span class="material-symbols-outlined">chevron_right</span></a>
                         </div>
                     </div>
                     <div
@@ -278,10 +238,9 @@
                         </div>
                         <div class="mt-8">
                             <a class="text-primary font-label-md flex items-center gap-2 group-hover:translate-x-2 transition-transform"
-                                href="#">EVALUAR <span class="material-symbols-outlined">chevron_right</span></a>
+                                href="/home/sales">EVALUAR <span class="material-symbols-outlined">chevron_right</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    <!-- </section> -->
