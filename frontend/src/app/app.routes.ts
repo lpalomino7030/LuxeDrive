@@ -5,6 +5,7 @@ import { Inicio } from './pages/landing/inicio/inicio';
 import { Home } from './pages/landing/home/home';
 import { Rent } from './pages/landing/rent/rent';
 import { Sales } from './pages/landing/sales/sales';
+import { Dashboard } from './pages/dashboard/dashboard';
 import { Client } from './pages/client/client';
 import { Nosotros } from './pages/landing/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
@@ -29,12 +30,9 @@ export const routes: Routes = [
     ],
   },
 
-  {
-    path: 'perfil',
-    component: Client,
-    children: [
-      { path: '', component: Panel }
-    ]
+  { path: 'dashboard',
+    component: Dashboard,
+    children: [{ path: '', component: Contenido }]
   },
 
   {
@@ -43,7 +41,13 @@ export const routes: Routes = [
       import('./pages/autos/autos').then(m => m.Autos)
   },
 
-  //
+  {
+    path: 'perfil',
+    component: Client,
+    children: [
+      { path: '', component: Panel },
+      { path: 'fleet', component: Catalogo },
+    ],
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home' }
 ];
