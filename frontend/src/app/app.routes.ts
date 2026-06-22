@@ -5,15 +5,15 @@ import { Inicio } from './pages/landing/inicio/inicio';
 import { Home } from './pages/landing/home/home';
 import { Rent } from './pages/landing/rent/rent';
 import { Sales } from './pages/landing/sales/sales';
-import { Dashboard } from './pages/dashboard/dashboard';
 import { Client } from './pages/client/client';
 import { Nosotros } from './pages/landing/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
 import {Catalogo} from './pages/landing/catalogo/catalogo';
-
+import { Autos } from './pages/autos/autos';
 
 export const routes: Routes = [
+
   { path: 'login', component: Login },
   { path: 'register', component: Register },
 
@@ -29,8 +29,21 @@ export const routes: Routes = [
     ],
   },
 
-  { path: 'dashboard', component: Dashboard, children: [{ path: '', component: Contenido }] },
+  {
+    path: 'perfil',
+    component: Client,
+    children: [
+      { path: '', component: Panel }
+    ]
+  },
 
-  { path: 'perfil', component: Client, children: [{ path: '', component: Panel }] },
+  {
+    path: 'autos',
+    loadComponent: () =>
+      import('./pages/autos/autos').then(m => m.Autos)
+  },
+
+  //
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home' }
 ];

@@ -1,0 +1,28 @@
+<div class="table-container">
+  <h1>Lista de Autos</h1>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Placa</th>
+      <th>Año</th>
+      <th>Precio</th>
+      <th>Acciones</th> </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let a of autos">
+      <td>{{a.marca}}</td>
+      <td>{{a.modelo}}</td>
+      <td>{{a.placa}}</td>
+      <td>{{a.anio}}</td>
+      <td>{{a.precio | currency}}</td>
+      <td>
+        <button class="btn-editar">Editar</button>
+        <button class="btn-eliminar">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
