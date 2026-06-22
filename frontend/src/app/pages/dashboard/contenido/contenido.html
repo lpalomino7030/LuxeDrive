@@ -1,0 +1,303 @@
+<main class="ml-64 min-h-screen overflow-y-auto bg-background">
+  <!-- Top Bar -->
+  <header class="w-full sticky top-0 z-40 bg-surface-container-low border-b border-outline-variant shadow-sm flex items-center justify-between px-margin-desktop py-4">
+    <h2 class="font-headline-md text-headline-md text-primary uppercase tracking-tighter">Panel de Administración</h2>
+    <div class="flex items-center gap-6">
+      <div class="relative hidden md:block">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+        <input class="bg-surface-container-highest border-none rounded-full pl-10 pr-4 py-2 text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Buscar registros..." type="text"/>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="text-on-surface-variant hover:text-on-surface transition-colors relative">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="absolute top-0 right-0 w-2 h-2 bg-tertiary rounded-full"></span>
+        </button>
+        <button class="text-on-surface-variant hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+        <div class="h-8 w-px bg-outline-variant mx-2"></div>
+        <div class="flex items-center gap-3">
+          <div class="text-right hidden sm:block">
+            <p class="font-label-md text-label-md text-on-surface leading-none">Admin Console</p>
+            <p class="text-[11px] text-on-surface-variant mt-1">Executive Access</p>
+          </div>
+          <img class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A professional headshot of a premium car dealership administrator in a high-tech office environment. The person is wearing a crisp dark suit, exudes authority and reliability. The background is slightly blurred with soft blue ambient lighting and sleek automotive silhouettes in the distance. 4k cinematic resolution, corporate portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHYu-s_Di4TWDQVu0ipcxGotlU_aeIwrTGkplKA0bLIxEEgF2J_UA0SxO3AIw7ypyyAk1sSDSsos6Hw0LzOhe3yPH2kbKxQ7exhcWoIoY255C-MI78ZWgTkUno_g_ruk_komNl7qAQK_kIMx8b98fiEP4FD9QdhUG4FL0NfmKq5nVtAaIG8osDq1FJCuoHnFhVkARHYEHvODhKIlZ2LctUiY2Lg_shGoG0J46FdGSWAeAlr1-wfj236iOPquTX7gOikdkO6ghivAUN"/>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="p-margin-desktop space-y-8 max-w-[1400px] mx-auto">
+    <!-- High-Level Stats Bento -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      <div class="glass-panel p-6 rounded-xl flex flex-col justify-between group hover:border-primary transition-all">
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-tertiary-container rounded-lg text-tertiary">
+            <span class="material-symbols-outlined fill-icon">payments</span>
+          </div>
+          <span class="text-xs font-bold text-tertiary flex items-center gap-1 bg-tertiary/10 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +12%
+                        </span>
+        </div>
+        <div class="mt-4">
+          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Total Revenue</p>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">$4.2M</h3>
+        </div>
+      </div>
+      <div class="glass-panel p-6 rounded-xl flex flex-col justify-between group hover:border-primary transition-all">
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-secondary-container rounded-lg text-secondary">
+            <span class="material-symbols-outlined fill-icon">shopping_cart</span>
+          </div>
+          <span class="text-xs font-bold text-on-surface-variant flex items-center gap-1 bg-surface-variant px-2 py-1 rounded">
+                            Este Mes
+                        </span>
+        </div>
+        <div class="mt-4">
+          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Vehicles Sold</p>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">128</h3>
+        </div>
+      </div>
+      <div class="glass-panel p-6 rounded-xl flex flex-col justify-between group hover:border-primary transition-all">
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-surface-container-highest rounded-lg text-primary">
+            <span class="material-symbols-outlined fill-icon">event_repeat</span>
+          </div>
+          <span class="text-xs font-bold text-error flex items-center gap-1 bg-error/10 px-2 py-1 rounded">
+                            Acción Requerida
+                        </span>
+        </div>
+        <div class="mt-4">
+          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Pending Visits</p>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">42</h3>
+        </div>
+      </div>
+      <div class="glass-panel p-6 rounded-xl flex flex-col justify-between group hover:border-primary transition-all">
+        <div class="flex justify-between items-start">
+          <div class="p-3 bg-primary-container rounded-lg text-primary-fixed">
+            <span class="material-symbols-outlined fill-icon">list_alt</span>
+          </div>
+          <span class="text-xs font-bold text-primary flex items-center gap-1 bg-primary/10 px-2 py-1 rounded">
+                            Activo
+                        </span>
+        </div>
+        <div class="mt-4">
+          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Active Listings</p>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">315</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Middle Section: Recent Visits & Inventory Chart -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+      <!-- Recent Visit Requests Table -->
+      <div class="lg:col-span-2 glass-panel rounded-xl overflow-hidden flex flex-col">
+        <div class="p-6 border-b border-outline-variant flex items-center justify-between">
+          <h4 class="font-headline-md text-headline-md text-on-surface">Recent Visit Requests</h4>
+          <button class="text-primary font-label-md text-label-md hover:underline">Ver Todos</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-surface-container-low text-on-surface-variant text-[12px] uppercase tracking-wider">
+            <tr>
+              <th class="px-6 py-4 font-semibold">Cliente</th>
+              <th class="px-6 py-4 font-semibold">Modelo de Vehículo</th>
+              <th class="px-6 py-4 font-semibold">Estado</th>
+              <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+            </tr>
+            </thead>
+            <tbody class="divide-y divide-outline-variant/30">
+            <tr class="hover:bg-surface-container-high/50 transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">AL</div>
+                  <div>
+                    <p class="font-semibold text-on-surface">Alejandro Luna</p>
+                    <p class="text-xs text-on-surface-variant">aluna@example.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">Porsche 911 GT3</span>
+              </td>
+              <td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-xs font-bold">Pendiente</span>
+</span>
+              </td>
+              <td class="px-6 py-4 text-right">
+                <button class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-primary">
+                  <span class="material-symbols-outlined text-sm">visibility</span>
+                </button>
+                <button class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-green-400">
+                  <span class="material-symbols-outlined text-sm">check_circle</span>
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-container-high/50 transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">SM</div>
+                  <div>
+                    <p class="font-semibold text-on-surface">Sofía Mendoza</p>
+                    <p class="text-xs text-on-surface-variant">smendoza@domain.com</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">Audi RS e-tron GT</span>
+              </td>
+              <td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+<span class="text-xs font-bold">Confirmado</span>
+</span>
+              </td>
+              <td class="px-6 py-4 text-right">
+                <button class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm">visibility</span>
+                </button>
+                <button class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm">mail</span>
+                </button>
+              </td>
+            </tr>
+            <tr class="hover:bg-surface-container-high/50 transition-colors">
+              <td class="px-6 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">RP</div>
+                  <div>
+                    <p class="font-semibold text-on-surface">Roberto Parra</p>
+                    <p class="text-xs text-on-surface-variant">roberto.p@luxemail.es</p>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4">
+                <span class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">BMW M8 Competition</span>
+              </td>
+              <td class="px-6 py-4">
+<span class="flex items-center gap-1.5 text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-xs font-bold">Pendiente</span>
+</span>
+              </td>
+              <td class="px-6 py-4 text-right">
+                <button class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-primary">
+                  <span class="material-symbols-outlined text-sm">visibility</span>
+                </button>
+                <button class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-green-400">
+                  <span class="material-symbols-outlined text-sm">check_circle</span>
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Inventory Overview Summary -->
+      <div class="glass-panel rounded-xl p-6 flex flex-col">
+        <h4 class="font-headline-md text-headline-md text-on-surface mb-6">Inventory Overview</h4>
+        <div class="flex-1 flex flex-col justify-center">
+          <!-- Custom Chart Simulation -->
+          <div class="relative h-48 w-48 mx-auto flex items-center justify-center">
+            <svg class="w-full h-full transform -rotate-90">
+              <circle cx="50%" cy="50%" fill="transparent" r="45%" stroke="#3e495d" stroke-width="12"></circle>
+              <circle cx="50%" cy="50%" fill="transparent" r="45%" stroke="#bec6e0" stroke-dasharray="283" stroke-dashoffset="100" stroke-width="14"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+              <span class="text-3xl font-bold text-on-surface">315</span>
+              <span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Total</span>
+            </div>
+          </div>
+          <div class="mt-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 rounded-full bg-primary"></span>
+                <span class="font-label-md text-label-md text-on-surface">Sales Fleet</span>
+              </div>
+              <span class="font-bold text-on-surface">210 (67%)</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+                <span class="font-label-md text-label-md text-on-surface">Rentals / Concierge</span>
+              </div>
+              <span class="font-bold text-on-surface-variant">105 (33%)</span>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-outline-variant">
+            <button class="w-full py-3 rounded-lg border border-outline-variant font-bold text-on-surface hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined">analytics</span>
+              Full Inventory Report
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Section: Luxury Fleet Gallery / Highlights -->
+    <section class="space-y-6">
+      <div class="flex items-center justify-between">
+        <h4 class="font-headline-md text-headline-md text-on-surface">Featured Fleet Performance</h4>
+        <div class="flex gap-2">
+          <button class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined">chevron_left</span></button>
+          <button class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined">chevron_right</span></button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div class="glass-panel rounded-xl overflow-hidden group">
+          <div class="h-48 relative overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A side-profile shot of a matte black Mercedes-Benz G-Class SUV parked in a modern minimalist garage with industrial concrete walls and sleek blue strip lighting. High-end luxury automotive photography, razor-sharp focus, cinematic atmosphere, cold tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBt_IowZEzC0uWVSE--ONMWxFYLNUqANgO163EOr-PcvskHstd8afYLM9zYdwZfeSoocvYkP5q0pbdR90pfdZO8z9wjC_xswtvCDgqXh9LcpGqZxoH7CwkJtR1-Fm65kjBDtGV5xN7uMTet10CuSXSy7wSuRqYDR6eQ_6mW7afOWMHGk0cSn5PQ9KgbLTrDm3WR5vP2VxAGLWBtwg_4r1NzOPr9Gzo6YzzIHeKwgVW1Da-_PHoYhiX8-Q_1o43RMozLT85UVRcr794"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-2 py-1 text-[10px] font-bold rounded">TOP RENTAL</span>
+          </div>
+          <div class="p-4 flex justify-between items-end">
+            <div>
+              <h5 class="font-bold text-on-surface">G-Wagon G63</h5>
+              <p class="text-xs text-on-surface-variant mt-1">24 Bookings this month</p>
+            </div>
+            <p class="text-tertiary font-bold">$1,200/day</p>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl overflow-hidden group">
+          <div class="h-48 relative overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up front view of a Rosso Corsa Red Ferrari SF90 Stradale in a high-tech showroom. The lighting highlights the aerodynamic curves and carbon fiber details. Reflections of a dark slate floor create a high-contrast luxury feel. Minimalist and technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaTUiaN0tiIeWZikAF0W8HTXexEWxMl9u3lhbZHiEu_3IXgdvDc2xHPmi4cTDV26cqgss-rsJOiR1QzPgeDdoSqrHj7ajRSab_mUGMXawIJOIC-075johM2GalFasNj-ExUwpKw8lGRosDsK4u07XRyl3ffueJp8FCv-QRcWH8ZlAPwG5I44enHd7HH1wtMy3EU2wJ86kiYDv9KgGMosD1ep4EegU7PfYFQ-NVMI84FcqtPV3422WPpkknIIzd0EdFl0zjX1Z7DO4F"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-primary text-on-primary px-2 py-1 text-[10px] font-bold rounded">NEW LISTING</span>
+          </div>
+          <div class="p-4 flex justify-between items-end">
+            <div>
+              <h5 class="font-bold text-on-surface">Ferrari SF90</h5>
+              <p class="text-xs text-on-surface-variant mt-1">4 Enquiries pending</p>
+            </div>
+            <p class="text-tertiary font-bold">$540,000</p>
+          </div>
+        </div>
+        <div class="glass-panel rounded-xl overflow-hidden group">
+          <div class="h-48 relative overflow-hidden">
+            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A futuristic electric vehicle, the Tesla Model S Plaid, charging at a sleek brushed-metal charging station during twilight. The background shows a modern architectural building with glass windows. Dark mode aesthetic with electric blue accents and soft glows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOqkJG5KzXOeIJ0huhfqBO9wLgdT3DP-7jA1Cwu3qO2PORmCqgI1hZP7rJ6q_3GnLsua9WZBntK1nEm5cfI1kyOkCwQELCYdpIMOw-xWs_VsXj6v5iWAc0-LitYcqCwgHLhkJCi2Px_A1RDOoGMu1rq7mk9zG7x0XMRWbuGA6Yxm-fRgCBZ3-jJodereh48crdGP1OEJNYbabhzqnsfFionJX3VciXFdq1c5Idj9gbzXKWOPxmYnWOLC0ZxiSuNBVcJczen2MRPqdJ"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+            <span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-2 py-1 text-[10px] font-bold rounded">EV CHOICE</span>
+          </div>
+          <div class="p-4 flex justify-between items-end">
+            <div>
+              <h5 class="font-bold text-on-surface">Model S Plaid</h5>
+              <p class="text-xs text-on-surface-variant mt-1">100% Availability</p>
+            </div>
+            <p class="text-tertiary font-bold">$850/day</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="w-full bg-surface-dim border-t border-outline-variant flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12">
+    <div class="mb-6 md:mb-0">
+      <h2 class="font-display-lg text-headline-md text-primary tracking-tighter">LuxeDrive</h2>
+      <p class="text-on-surface-variant font-body-md mt-2">© 2024 LuxeDrive Global. Engineered for Excellence.</p>
+    </div>
+    <div class="flex flex-wrap gap-8">
+      <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+      <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+      <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Dealer Network</a>
+      <a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Contact Us</a>
+    </div>
+  </footer>
+</main>

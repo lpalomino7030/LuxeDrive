@@ -1,0 +1,35 @@
+<div class="login-container">
+
+  <div class="login-card">
+
+    <a href="/home">
+
+
+    <h1>LuxeDrive</h1>
+    </a>
+    <p class="subtitle">
+      Inicia sesión para continuar
+    </p>
+
+    <input
+      [(ngModel)]="username"
+      type="text"
+      placeholder="Usuario">
+
+    <input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Contraseña">
+
+    <button (click)="login()">
+      Iniciar Sesión
+    </button>
+
+    <p class="register-link">
+      ¿No tienes cuenta?
+      <a href="/register">Registrarse</a>
+    </p>
+
+  </div>
+
+</div>
