@@ -3,39 +3,25 @@
   <div class="register-card">
 
     <a href="/home">
-    <h1>LuxeDrive</h1>
+      <h1>LuxeDrive</h1>
     </a>
     <p class="subtitle">
       Crear una nueva cuenta
     </p>
 
-    <input
-      type="text"
-      placeholder="Nombre">
+    <input [(ngModel)]="nombre" type="text" placeholder="Nombre">
 
-    <input
-      type="text"
-      placeholder="Apellido">
+    <input [(ngModel)]="apellido" type="text" placeholder="Apellido">
 
-    <input
-      type="email"
-      placeholder="Correo electrónico">
+    <input [(ngModel)]="correo" type="email" placeholder="Correo electrónico">
 
-    <input
-      type="text"
-      placeholder="Teléfono">
+    <input [(ngModel)]="telefono" type="text" placeholder="Teléfono">
 
-    <input
-      type="password"
-      placeholder="Contraseña">
+    <input [(ngModel)]="password" type="password" placeholder="Contraseña">
 
-    <input
-      type="password"
-      placeholder="Confirmar contraseña">
+    <input [(ngModel)]="confirmarPassword" type="password" placeholder="Confirmar contraseña">
 
-    <button>
-      Crear Cuenta
-    </button>
+    <button (click)="register()">Crear Cuenta</button>
 
     <p class="login-link">
       ¿Ya tienes cuenta?
@@ -45,3 +31,4 @@
   </div>
 
 </div>
+s
