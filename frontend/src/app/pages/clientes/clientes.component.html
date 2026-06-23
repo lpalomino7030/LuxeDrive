@@ -1,0 +1,59 @@
+<div class="clientes-container">
+
+  <div class="form-card">
+
+    <h2>{{ editando ? 'Editar Cliente' : 'Crear Cliente' }}</h2>
+
+    <form [formGroup]="formCliente" (ngSubmit)="crearCliente()">
+
+      <input formControlName="nombre" placeholder="Nombre">
+      <input formControlName="apellido" placeholder="Apellido">
+      <input formControlName="dni" placeholder="DNI">
+
+      <div class="buttons">
+        <button type="submit">
+          {{ editando ? 'Actualizar' : 'Crear Cliente' }}
+        </button>
+
+        <button type="button" *ngIf="editando" (click)="cancelar()">
+          Cancelar
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="table-card">
+
+    <h2>Listado de Clientes</h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let c of clientes$ | async">
+        <td>{{ c.idClientes }}</td>
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.apellido }}</td>
+        <td>{{ c.dni }}</td>
+        <td>
+          <button class="edit" (click)="editar(c)">Editar</button>
+          <button class="delete" (click)="eliminar(c.idClientes!)">Eliminar</button>
+        </td>
+      </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

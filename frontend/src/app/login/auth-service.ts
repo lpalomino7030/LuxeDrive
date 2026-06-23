@@ -12,12 +12,18 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+  saveToken(token: string): void {
+    localStorage.setItem('token', token);
+  }
+
+  saveRole(role: string): void {
+    localStorage.setItem('rol', role);
+  }
+
   getUser(): any {
     const token = this.getToken();
 
-    if (!token) {
-      return null;
-    }
+    if (!token) return null;
 
     return jwtDecode(token);
   }
@@ -33,7 +39,6 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('rol');
-
     this.router.navigate(['/login']);
   }
 }

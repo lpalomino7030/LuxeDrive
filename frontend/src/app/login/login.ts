@@ -30,21 +30,18 @@ export class Login {
     this.http.post<any>('http://localhost:8080/auth/login', body).subscribe({
       next: (response) => {
         const token = response.token;
-        localStorage.setItem('token', token);
+        this.authService.saveToken(token);
 
         const decoded: any = jwtDecode(token);
-
         const userRol = decoded.rol;
 
-        localStorage.setItem('rol', userRol);
+        this.authService.saveRole(userRol);
 
         alert('Login correcto');
 
-        console.warn(userRol);
         if (userRol?.toUpperCase() === 'ADMIN') {
           this.router.navigate(['/dashboard']);
         } else {
-          console.log('soy cliente');
           this.router.navigate(['/perfil']);
         }
       },
