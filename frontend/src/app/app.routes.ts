@@ -12,11 +12,13 @@ import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
 import {Catalogo} from './pages/landing/catalogo/catalogo';
 import { Autos } from './pages/dashboard/autos/autos';
+import { ClientesComponent } from '.pages/clientes/clientes.component';
 
 export const routes: Routes = [
 
   { path: 'login', component: Login },
   { path: 'register', component: Register },
+  { path: 'clientes', component: ClientesComponent },
 
   {
     path: 'home',

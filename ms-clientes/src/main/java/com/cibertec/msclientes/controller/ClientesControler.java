@@ -44,4 +44,14 @@ public class ClientesControler {
         clienteService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Clientes> actualizar(
+            @PathVariable Long id,
+            @RequestBody Clientes cliente) {
+
+        Clientes actualizado = clienteService.actualizar(id, cliente);
+
+        return ResponseEntity.ok(actualizado);
+    }
 }

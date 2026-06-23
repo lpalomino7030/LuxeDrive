@@ -1,3 +1,5 @@
+CREATE DATABASE auth;
+
     CREATE TABLE usuarios(
      id SERIAL PRIMARY KEY,
      username VARCHAR(50) UNIQUE,
