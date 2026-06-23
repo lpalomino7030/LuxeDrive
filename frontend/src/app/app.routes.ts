@@ -13,6 +13,7 @@ import { Panel } from './pages/client/panel/panel';
 import {Catalogo} from './pages/landing/catalogo/catalogo';
 import { Autos } from './pages/dashboard/autos/autos';
 import { ClientesComponent } from './pages/clientes/clientes.component';
+import { Ventas } from './pages/dashboard/ventas/ventas';
 
 export const routes: Routes = [
   { path: 'login', component: Login },
@@ -36,6 +37,7 @@ export const routes: Routes = [
     children: [
       { path: '', component: Contenido },
       { path: 'autos', component: Autos },
+      { path: 'ventas', component: Ventas },
       { path: 'clientes', component: ClientesComponent },
     ],
   },

@@ -1,0 +1,171 @@
+<main class="ml-64 min-h-screen overflow-y-auto bg-background">
+<div class="flex justify-between items-center mb-6">
+
+    <div>
+      <h2 class="text-2xl font-bold text-on-surface">
+        Gestión de Ventas
+      </h2>
+
+      <p class="text-sm text-on-surface-variant">
+        Registro y administración de ventas realizadas
+      </p>
+    </div>
+
+    <button
+      routerLink="/ventas/nueva"
+      class="px-4 py-2 rounded-xl bg-primary text-white flex items-center gap-2">
+
+    <span class="material-symbols-outlined">
+      add
+    </span>
+
+      Nueva Venta
+
+    </button>
+
+  </div>
+  <table class="w-full text-left">
+
+    <thead class="bg-surface-container-low text-on-surface-variant text-[12px] uppercase tracking-wider">
+    <tr>
+      <th class="px-6 py-4 font-semibold">Cliente</th>
+      <th class="px-6 py-4 font-semibold">Vehículo</th>
+      <th class="px-6 py-4 font-semibold">Fecha</th>
+      <th class="px-6 py-4 font-semibold">Precio</th>
+      <th class="px-6 py-4 font-semibold">Descripción</th>
+      <th class="px-6 py-4 font-semibold text-right">Acciones</th>
+    </tr>
+    </thead>
+
+    <tbody class="divide-y divide-outline-variant/30">
+
+      @for (venta of ventas; track venta.idVenta) {
+
+        <tr class="hover:bg-surface-container-high/50 transition-colors">
+
+          <!-- Cliente -->
+          <td class="px-6 py-4">
+            <div class="flex items-center gap-3">
+
+              <div
+                class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">
+
+                {{ venta.idClientes.nombre.charAt(0) }}
+                {{ venta.idClientes.apellido.charAt(0) }}
+
+              </div>
+
+              <div>
+                <p class="font-semibold text-on-surface">
+                  {{ venta.idClientes.nombre }}
+                  {{ venta.idClientes.apellido }}
+                </p>
+
+                <p class="text-xs text-on-surface-variant">
+                  DNI: {{ venta.idClientes.dni }}
+                </p>
+              </div>
+
+            </div>
+          </td>
+
+          <!-- Auto -->
+          <td class="px-6 py-4">
+
+          <span
+            class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">
+
+            {{ venta.idAutos.marca }}
+            {{ venta.idAutos.modelo }}
+
+          </span>
+
+            <p class="text-xs text-on-surface-variant mt-1">
+              {{ venta.idAutos.placa }}
+            </p>
+
+          </td>
+
+          <!-- Fecha -->
+          <td class="px-6 py-4">
+
+          <span
+            class="flex items-center gap-2 text-on-surface">
+
+            <span class="material-symbols-outlined text-sm">
+              calendar_month
+            </span>
+
+            {{ venta.fechaVenta | date:'dd/MM/yyyy' }}
+
+          </span>
+
+          </td>
+
+          <!-- Precio -->
+          <td class="px-6 py-4">
+
+          <span
+            class="text-green-400 font-bold">
+
+            S/ {{ venta.precioVenta | number:'1.2-2' }}
+
+          </span>
+
+          </td>
+
+          <!-- Descripción -->
+          <td class="px-6 py-4 max-w-xs">
+
+            <p
+              class="text-sm text-on-surface-variant truncate">
+
+              {{ venta.descripcion }}
+
+            </p>
+
+          </td>
+
+          <!-- Acciones -->
+          <td class="px-6 py-4 text-right">
+
+            <button
+              class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-primary">
+
+            <span class="material-symbols-outlined text-sm">
+              visibility
+            </span>
+
+            </button>
+
+            <button
+              (click)="editar(venta.idVenta)"
+              class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-yellow-400">
+
+            <span class="material-symbols-outlined text-sm">
+              edit
+            </span>
+
+            </button>
+
+            <button
+              (click)="eliminar(venta.idVenta)"
+              class="p-2 hover:bg-surface-container-highest rounded-lg transition-all text-on-surface-variant hover:text-red-400">
+
+            <span class="material-symbols-outlined text-sm">
+              delete
+            </span>
+
+            </button>
+
+          </td>
+
+        </tr>
+
+      }
+
+    </tbody>
+
+  </table>
+
+</main>
