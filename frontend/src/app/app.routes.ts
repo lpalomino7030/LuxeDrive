@@ -15,10 +15,8 @@ import { Autos } from './pages/dashboard/autos/autos';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 
 export const routes: Routes = [
-
   { path: 'login', component: Login },
   { path: 'register', component: Register },
-  { path: 'clientes', component: ClientesComponent },
 
   {
     path: 'home',
@@ -32,17 +30,19 @@ export const routes: Routes = [
     ],
   },
 
-  { path: 'dashboard',
+  {
+    path: 'dashboard',
     component: Dashboard,
-    children: [{ path: '', component: Contenido },
-      {path: 'autos' , component: Autos },
-      ]
+    children: [
+      { path: '', component: Contenido },
+      { path: 'autos', component: Autos },
+      { path: 'clientes', component: ClientesComponent },
+    ],
   },
 
   {
     path: 'autos',
-    loadComponent: () =>
-      import('./pages/dashboard/autos/autos').then(m => m.Autos)
+    loadComponent: () => import('./pages/dashboard/autos/autos').then((m) => m.Autos),
   },
 
   {
