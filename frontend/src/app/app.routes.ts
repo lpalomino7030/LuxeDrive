@@ -11,7 +11,7 @@ import { Nosotros } from './pages/landing/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
 import {Catalogo} from './pages/landing/catalogo/catalogo';
-import { Autos } from './pages/autos/autos';
+import { Autos } from './pages/dashboard/autos/autos';
 
 export const routes: Routes = [
 
@@ -32,13 +32,15 @@ export const routes: Routes = [
 
   { path: 'dashboard',
     component: Dashboard,
-    children: [{ path: '', component: Contenido }]
+    children: [{ path: '', component: Contenido },
+      {path: 'autos' , component: Autos },
+      ]
   },
 
   {
     path: 'autos',
     loadComponent: () =>
-      import('./pages/autos/autos').then(m => m.Autos)
+      import('./pages/dashboard/autos/autos').then(m => m.Autos)
   },
 
   {
