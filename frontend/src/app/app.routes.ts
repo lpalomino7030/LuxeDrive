@@ -10,8 +10,7 @@ import { Client } from './pages/client/client';
 import { Nosotros } from './pages/landing/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
-import {Catalogo} from './pages/landing/catalogo/catalogo';
-import { Autos } from './pages/dashboard/autos/autos';
+import { Catalogo } from './pages/landing/catalogo/catalogo';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { Ventas } from './pages/dashboard/ventas/ventas';
 
@@ -36,15 +35,14 @@ export const routes: Routes = [
     component: Dashboard,
     children: [
       { path: '', component: Contenido },
-      { path: 'autos', component: Autos },
       { path: 'ventas', component: Ventas },
       { path: 'clientes', component: ClientesComponent },
-    ],
-  },
 
-  {
-    path: 'autos',
-    loadComponent: () => import('./pages/dashboard/autos/autos').then((m) => m.Autos),
+      {
+        path: 'autos',
+        loadComponent: () => import('./pages/dashboard/autos/autos').then((m) => m.AutosComponent),
+      },
+    ],
   },
 
   {
@@ -55,5 +53,6 @@ export const routes: Routes = [
       { path: 'fleet', component: Catalogo },
     ],
   },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

@@ -1,28 +1,310 @@
-<div class="table-container">
-  <h1>Lista de Autos</h1>
+<main class="ml-64 min-h-screen overflow-y-auto bg-background p-8">
 
-  <table>
-    <thead>
-    <tr>
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th>Placa</th>
-      <th>Año</th>
-      <th>precio</th>
-      <th>Acciones</th> </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let a of autos">
-      <td>{{a.marca}}</td>
-      <td>{{a.modelo}}</td>
-      <td>{{a.placa}}</td>
-      <td>{{a.anio}}</td>
-      <td>{{a.precio | currency}}</td>
-      <td>
-        <button class="btn-editar">Editar</button>
-        <button class="btn-eliminar">Eliminar</button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-</div>
+  <!-- HEADER -->
+  <div class="flex justify-between items-center mb-8">
+
+    <div>
+      <h2 class="text-3xl font-bold text-on-surface">
+        Gestión de Autos
+      </h2>
+
+      <p class="text-sm text-on-surface-variant mt-1">
+        Registro y administración del inventario de vehículos
+      </p>
+    </div>
+
+    <button
+      (click)="nuevoAuto()"
+      class="px-5 py-3 rounded-xl bg-emerald-500 text-white flex items-center gap-2 hover:bg-emerald-600 transition shadow-lg">
+
+      <span class="material-symbols-outlined">
+        add
+      </span>
+
+      Nuevo Auto
+
+    </button>
+
+  </div>
+
+  <!-- RESUMEN -->
+  <div class="mb-6">
+
+    <div class="bg-surface-container-low rounded-xl px-5 py-4 inline-block shadow">
+
+      <p class="text-xs uppercase text-on-surface-variant">
+        Total vehículos
+      </p>
+
+      <p class="text-3xl font-bold text-on-surface">
+        {{ autos.length }}
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- TABLA -->
+  <div
+    class="bg-surface-container rounded-2xl overflow-hidden border border-outline-variant shadow-lg">
+
+    <div class="overflow-x-auto">
+
+      <table class="w-full text-left">
+
+        <thead
+          class="bg-surface-container-low text-on-surface-variant text-xs uppercase tracking-wider">
+
+        <tr>
+          <th class="px-6 py-4">Vehículo</th>
+          <th class="px-6 py-4">Año</th>
+          <th class="px-6 py-4">Precio</th>
+          <th class="px-6 py-4">Color</th>
+          <th class="px-6 py-4">Tipo</th>
+          <th class="px-6 py-4">Estado</th>
+          <th class="px-6 py-4 text-right">Acciones</th>
+        </tr>
+
+        </thead>
+
+        <tbody class="divide-y divide-outline-variant/20">
+
+          @for (auto of autos; track auto.idAutos) {
+
+            <tr class="hover:bg-surface-container-high/40 transition">
+
+              <!-- VEHICULO -->
+              <td class="px-6 py-4">
+
+                <div>
+
+                  <p class="font-semibold text-on-surface">
+                    {{ auto.marca }}
+                  </p>
+
+                  <p class="text-xs text-on-surface-variant">
+                    {{ auto.modelo }}
+                  </p>
+
+                </div>
+
+              </td>
+
+              <!-- AÑO -->
+              <td class="px-6 py-4">
+                {{ auto.anio }}
+              </td>
+
+              <!-- PRECIO -->
+              <td class="px-6 py-4">
+
+                <span class="text-green-400 font-bold">
+                  $ {{ auto.precio | number:'1.2-2' }}
+                </span>
+
+              </td>
+
+              <!-- COLOR -->
+              <td class="px-6 py-4">
+                {{ auto.color }}
+              </td>
+
+              <!-- TIPO -->
+              <td class="px-6 py-4">
+                {{ auto.tipo }}
+              </td>
+
+              <!-- ESTADO -->
+              <td class="px-6 py-4">
+
+                @if (auto.estado === 'Disponible') {
+
+                  <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold">
+                    Disponible
+                  </span>
+
+                } @else if (auto.estado === 'Reservado') {
+
+                  <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs font-semibold">
+                    Reservado
+                  </span>
+
+                } @else {
+
+                  <span class="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs font-semibold">
+                    {{ auto.estado }}
+                  </span>
+
+                }
+
+              </td>
+
+              <!-- ACCIONES -->
+              <td>
+
+                <button
+                  (click)="verAuto(auto)"
+                  class="p-2 rounded-lg hover:bg-blue-500/20 hover:text-blue-400 transition">
+
+                  <span class="material-symbols-outlined">
+                    visibility
+                  </span>
+
+                </button>
+
+                <button
+                  (click)="editarAuto(auto)"
+                  class="p-2 rounded-lg hover:bg-yellow-500/20 hover:text-yellow-400 transition">
+
+                  <span class="material-symbols-outlined">
+                    edit
+                  </span>
+
+                </button>
+
+                <button
+                  (click)="eliminarAuto(auto.idAutos)"
+                  class="p-2 rounded-lg hover:bg-red-500/20 hover:text-red-400 transition">
+
+                  <span class="material-symbols-outlined">
+                    delete
+                  </span>
+
+                </button>
+
+              </td>
+
+            </tr>
+
+          } @empty {
+
+            <tr>
+
+              <td
+                colspan="7"
+                class="text-center py-12 text-on-surface-variant">
+
+                <span class="material-symbols-outlined text-5xl block mb-3">
+                  directions_car
+                </span>
+
+                No hay autos registrados
+
+              </td>
+
+            </tr>
+
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL -->
+  @if (mostrarFormulario) {
+
+    <div
+      class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+
+      <div
+        class="bg-surface-container w-full max-w-2xl rounded-2xl shadow-2xl p-6">
+
+        <h3 class="text-2xl font-bold mb-6">
+
+          {{ editando ? 'Editar Auto' : 'Nuevo Auto' }}
+
+        </h3>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <input
+            [(ngModel)]="auto.marca"
+            placeholder="Marca"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant">
+
+          <input
+            [(ngModel)]="auto.modelo"
+            placeholder="Modelo"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant">
+
+          <input
+            [(ngModel)]="auto.anio"
+            type="number"
+            placeholder="Año"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant">
+
+          <input
+            [(ngModel)]="auto.precio"
+            type="number"
+            placeholder="Precio"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant">
+
+          <input
+            [(ngModel)]="auto.color"
+            placeholder="Color"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant">
+
+          <input
+            [(ngModel)]="auto.tipo"
+            placeholder="Tipo"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant">
+
+          <select
+            [(ngModel)]="auto.estado"
+            class="p-3 rounded-lg bg-surface-container-high border border-outline-variant col-span-2">
+
+            <option value="">Estado</option>
+            <option value="Disponible">Disponible</option>
+            <option value="Reservado">Reservado</option>
+            <option value="Vendido">Vendido</option>
+
+          </select>
+
+        </div>
+
+        <div class="flex justify-end gap-3 mt-8">
+
+          <button
+            (click)="cancelar()"
+            class="px-5 py-2 rounded-lg bg-gray-600 text-white">
+
+            Cancelar
+
+          </button>
+
+          @if (editando) {
+
+            <button
+              (click)="actualizarAuto()"
+              class="px-5 py-2 rounded-lg bg-yellow-500 text-black font-semibold">
+
+              Actualizar
+
+            </button>
+
+          } @else {
+
+            <button
+              (click)="guardarAuto()"
+              class="px-5 py-2 rounded-lg bg-green-500 text-white font-semibold">
+
+              Guardar
+
+            </button>
+
+          }
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  }
+
+</main>

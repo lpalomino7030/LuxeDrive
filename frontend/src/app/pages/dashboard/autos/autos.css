@@ -1,51 +1,159 @@
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+.autos-container {
+  padding: 25px;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header p {
+  margin-top: 5px;
+  color: #b0b0b0;
+}
+
+.acciones-superior {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.buscador {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+  background: #2d3748;
+  color: white;
+}
+
+.buscador::placeholder {
+  color: #aaa;
+}
+
+.btn-nuevo {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-nuevo:hover {
+  opacity: 0.9;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: rgba(255,255,255,0.05);
 }
 
 th {
-  background-color: #1976d2;
-  color: white;
-  padding: 12px;
   text-align: left;
+  padding: 15px;
+  font-size: 13px;
+  color: #d1d5db;
 }
 
 td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-tr:hover {
-  background-color: #f5f5f5;
+tbody tr:hover {
+  background: rgba(255,255,255,0.03);
 }
 
-button {
-  padding: 6px 10px;
-  margin: 2px;
+.badge {
+  background: #4f46e5;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.estado {
+  background: #16a34a;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-ver,
+.btn-editar,
+.btn-eliminar {
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
 }
 
-button:hover {
-  opacity: 0.8;
+.btn-ver {
+  background: #2563eb;
+  color: white;
 }
 
 .btn-editar {
-  background-color: #ff9800;
+  background: #f59e0b;
   color: white;
 }
 
 .btn-eliminar {
-  background-color: #f44336;
+  background: #dc2626;
   color: white;
+}
+
+.btn-ver:hover,
+.btn-editar:hover,
+.btn-eliminar:hover {
+  opacity: 0.8;
+}
+.formulario {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  display: grid;
+  gap: 10px;
+}
+
+.formulario input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.acciones-form {
+  display: flex;
+  gap: 10px;
+}
+
+.acciones-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }

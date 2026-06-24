@@ -1,4 +1,4 @@
-package config;
+package com.cibertec.msautos.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
