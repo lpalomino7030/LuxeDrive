@@ -23,7 +23,7 @@
                         </span>
         </div>
         <div class="mt-4">
-          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Total Revenue</p>
+          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Total</p>
           <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">$4.2M</h3>
         </div>
       </div>
@@ -37,45 +37,17 @@
                         </span>
         </div>
         <div class="mt-4">
-          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Vehicles Sold</p>
+          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Ventas Realizadas</p>
           <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">{{cantidadVentas}}</h3>
         </div>
       </div>
-      <div class="glass-panel p-6 rounded-xl flex flex-col justify-between group hover:border-primary transition-all">
-        <div class="flex justify-between items-start">
-          <div class="p-3 bg-surface-container-highest rounded-lg text-primary">
-            <span class="material-symbols-outlined fill-icon">event_repeat</span>
-          </div>
-          <span class="text-xs font-bold text-error flex items-center gap-1 bg-error/10 px-2 py-1 rounded">
-                            Acción Requerida
-                        </span>
-        </div>
-        <div class="mt-4">
-          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Pending Visits</p>
-          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">42</h3>
-        </div>
-      </div>
-      <div class="glass-panel p-6 rounded-xl flex flex-col justify-between group hover:border-primary transition-all">
-        <div class="flex justify-between items-start">
-          <div class="p-3 bg-primary-container rounded-lg text-primary-fixed">
-            <span class="material-symbols-outlined fill-icon">list_alt</span>
-          </div>
-          <span class="text-xs font-bold text-primary flex items-center gap-1 bg-primary/10 px-2 py-1 rounded">
-                            Activo
-                        </span>
-        </div>
-        <div class="mt-4">
-          <p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-widest">Active Listings</p>
-          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-1">315</h3>
-        </div>
-      </div>
-    </section>
+           </section>
     <!-- Middle Section: Recent Visits & Inventory Chart -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
       <!-- Recent Visit Requests Table -->
       <div class="lg:col-span-2 glass-panel rounded-xl overflow-hidden flex flex-col">
         <div class="p-6 border-b border-outline-variant flex items-center justify-between">
-          <h4 class="font-headline-md text-headline-md text-on-surface">Recent Visit Requests</h4>
+          <h4 class="font-headline-md text-headline-md text-on-surface">Pedidos recientes</h4>
           <button class="text-primary font-label-md text-label-md hover:underline">Ver Todos</button>
         </div>
         <div class="overflow-x-auto">
@@ -95,7 +67,7 @@
                   <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">AL</div>
                   <div>
                     <p class="font-semibold text-on-surface">Alejandro Luna</p>
-                    <p class="text-xs text-on-surface-variant">aluna&#64;example.com</p>
+                    <p class="text-xs text-on-surface-variant">aluna&#64;luxedrive.com</p>
                   </div>
                 </div>
               </td>
@@ -123,7 +95,7 @@
                   <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">SM</div>
                   <div>
                     <p class="font-semibold text-on-surface">Sofía Mendoza</p>
-                    <p class="text-xs text-on-surface-variant">smendoza&#64;domain.com</p>
+                    <p class="text-xs text-on-surface-variant">smendoza&#64;luxedrive.com</p>
                   </div>
                 </div>
               </td>
@@ -151,7 +123,7 @@
                   <div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-xs font-bold">RP</div>
                   <div>
                     <p class="font-semibold text-on-surface">Roberto Parra</p>
-                    <p class="text-xs text-on-surface-variant">roberto.p&#64;luxemail.es</p>
+                    <p class="text-xs text-on-surface-variant">roberto.p&#64;luxedrive.com</p>
                   </div>
                 </div>
               </td>
@@ -178,45 +150,7 @@
         </div>
       </div>
       <!-- Inventory Overview Summary -->
-      <div class="glass-panel rounded-xl p-6 flex flex-col">
-        <h4 class="font-headline-md text-headline-md text-on-surface mb-6">Inventory Overview</h4>
-        <div class="flex-1 flex flex-col justify-center">
-          <!-- Custom Chart Simulation -->
-          <div class="relative h-48 w-48 mx-auto flex items-center justify-center">
-            <svg class="w-full h-full transform -rotate-90">
-              <circle cx="50%" cy="50%" fill="transparent" r="45%" stroke="#3e495d" stroke-width="12"></circle>
-              <circle cx="50%" cy="50%" fill="transparent" r="45%" stroke="#bec6e0" stroke-dasharray="283" stroke-dashoffset="100" stroke-width="14"></circle>
-            </svg>
-            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <span class="text-3xl font-bold text-on-surface">315</span>
-              <span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">Total</span>
-            </div>
-          </div>
-          <div class="mt-10 space-y-4">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <span class="w-3 h-3 rounded-full bg-primary"></span>
-                <span class="font-label-md text-label-md text-on-surface">Sales Fleet</span>
-              </div>
-              <span class="font-bold text-on-surface">210 (67%)</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <span class="w-3 h-3 rounded-full bg-secondary-container"></span>
-                <span class="font-label-md text-label-md text-on-surface">Rentals / Concierge</span>
-              </div>
-              <span class="font-bold text-on-surface-variant">105 (33%)</span>
-            </div>
-          </div>
-          <div class="mt-8 pt-6 border-t border-outline-variant">
-            <button class="w-full py-3 rounded-lg border border-outline-variant font-bold text-on-surface hover:bg-surface-container-highest transition-all flex items-center justify-center gap-2">
-              <span class="material-symbols-outlined">analytics</span>
-              Full Inventory Report
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+     </div>
     <!-- Bottom Section: Luxury Fleet Gallery / Highlights -->
     <section class="space-y-6">
       <div class="flex items-center justify-between">
@@ -236,9 +170,9 @@
           <div class="p-4 flex justify-between items-end">
             <div>
               <h5 class="font-bold text-on-surface">G-Wagon G63</h5>
-              <p class="text-xs text-on-surface-variant mt-1">24 Bookings this month</p>
+              <p class="text-xs text-on-surface-variant mt-1"></p>
             </div>
-            <p class="text-tertiary font-bold">$1,200/day</p>
+            <p class="text-tertiary font-bold"></p>
           </div>
         </div>
         <div class="glass-panel rounded-xl overflow-hidden group">
@@ -250,7 +184,7 @@
           <div class="p-4 flex justify-between items-end">
             <div>
               <h5 class="font-bold text-on-surface">Ferrari SF90</h5>
-              <p class="text-xs text-on-surface-variant mt-1">4 Enquiries pending</p>
+              <p class="text-xs text-on-surface-variant mt-1"></p>
             </div>
             <p class="text-tertiary font-bold">$540,000</p>
           </div>
@@ -264,9 +198,9 @@
           <div class="p-4 flex justify-between items-end">
             <div>
               <h5 class="font-bold text-on-surface">Model S Plaid</h5>
-              <p class="text-xs text-on-surface-variant mt-1">100% Availability</p>
+              <p class="text-xs text-on-surface-variant mt-1">100% Disponible</p>
             </div>
-            <p class="text-tertiary font-bold">$850/day</p>
+            <p class="text-tertiary font-bold">$85000</p>
           </div>
         </div>
       </div>
