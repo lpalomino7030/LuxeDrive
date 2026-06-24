@@ -27,17 +27,28 @@ public class VentaService {
     }
 
     public VentaResponse registrarVenta(VentaRequest request){
+
+        // Validar cliente
+        ClienteResponse cliente =
+                clienteFeignClient.obtenerCliente(
+                        request.idClientes()
+                );
+
+        // Validar auto
+        AutoResponse auto =
+                autosFeignClient.obtenerAuto(
+                        request.idAutos()
+                );
+
         Venta nuevaVenta = new Venta();
+
         nuevaVenta.setIdClientes(request.idClientes());
         nuevaVenta.setIdAutos(request.idAutos());
         nuevaVenta.setFechaVenta(request.fechaVenta());
         nuevaVenta.setPrecioVenta(request.precioVenta());
         nuevaVenta.setDescripcion(request.descripcion());
 
-    Venta ventaGuardada = ventaRepository.save(nuevaVenta);
-
-        ClienteResponse cliente = clienteFeignClient.obtenerCliente(ventaGuardada.getIdClientes());
-        AutoResponse auto = autosFeignClient.obtenerAuto(ventaGuardada.getIdAutos());
+        Venta ventaGuardada = ventaRepository.save(nuevaVenta);
 
         return new VentaResponse(
                 ventaGuardada.getIdVentas(),
@@ -47,8 +58,6 @@ public class VentaService {
                 ventaGuardada.getPrecioVenta(),
                 ventaGuardada.getDescripcion()
         );
-
-
     }
 
     public VentaResponse ObtenerVentaId (Long Id){
@@ -118,5 +127,18 @@ public class VentaService {
                 ventaActualizada.getPrecioVenta(),
                 ventaActualizada.getDescripcion()
         );
+    }
+
+    public void eliminarVenta(Long id){
+
+        Venta venta = ventaRepository.findById(id)
+                .orElseThrow(() ->
+                        new RuntimeException("Venta no encontrada"));
+
+        ventaRepository.delete(venta);
+    }
+
+    public Long contarVentas() {
+        return ventaRepository.count();
     }
 }

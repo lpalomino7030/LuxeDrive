@@ -37,9 +37,19 @@ public class VentasController {
 
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarVenta(
+            @PathVariable Long id){
 
+        ventaService.eliminarVenta(id);
 
+        return ResponseEntity.noContent().build();
+    }
 
+    @GetMapping("/count")
+    public Long contarVentas() {
+        return ventaService.contarVentas();
+    }
 
 
 }
