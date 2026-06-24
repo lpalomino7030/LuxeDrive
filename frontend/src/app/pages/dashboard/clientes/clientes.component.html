@@ -1,6 +1,8 @@
-<div class="clientes-container">
+<main class="ml-64 min-h-screen overflow-y-auto bg-background">
 
-  <div class="form-card">
+  <app-titulo-encabezado [titulo]="'Gestion de Clientes'"></app-titulo-encabezado>
+<div class="p-3">
+  <div class="form-card ">
 
     <h2>{{ editando ? 'Editar Cliente' : 'Crear Cliente' }}</h2>
 
@@ -55,5 +57,7 @@
     </table>
 
   </div>
-
 </div>
+
+
+</main>

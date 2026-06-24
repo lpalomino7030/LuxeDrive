@@ -7,6 +7,7 @@ import { Venta } from '../../../models/venta';
 import { VentasService } from '../../../services/ventas.service';
 import { TituloEncabezado } from '../titulo-encabezado/titulo-encabezado';
 import {ClienteService} from '../../../services/cliente.service';
+import { AutoService } from '../../../services/auto.service';
 
 @Component({
   selector: 'app-ventas',
@@ -35,22 +36,22 @@ export class Ventas implements OnInit {
   constructor(
     private ventasService: VentasService,
     private clienteService: ClienteService,
+    private autoService: AutoService,
     private router: Router,
     private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {
-    console.log('VentasComponent iniciado');
     this.cargarVentas();
     this.cargarClientes();
-    console.log('VentasComponent FIN');
+    this.cargarAutos();
   }
 
   cargarVentas() {
-    console.log('Cargando ventas...');
     this.ventasService.listar().subscribe({
       next: (data) => {
-        console.log('Ventas recibidas:', data);
+        console.log('VENTA:', data);
+
         this.ventas = data;
         this.cdr.detectChanges();
       },
@@ -60,10 +61,23 @@ export class Ventas implements OnInit {
     });
   }
 
+  cargarAutos() {
+    this.autoService.cargarAutos().subscribe({
+      next: (data) => {
+        console.log('AUTOS:', data);
+        this.autos = data;
+      },
+      error: (err) => {
+        console.error('Error al cargar autos:', err);
+      },
+    });
+  }
+
   cargarClientes() {
     this.clienteService.listarClientes().subscribe({
       next: (data) => {
         this.clientes = data;
+        this.cdr.detectChanges();
       },
 
       error: (err) => {
@@ -118,7 +132,6 @@ export class Ventas implements OnInit {
   }
 
   guardarVenta() {
-
     if (!this.formVenta.idClientes) {
       alert('Seleccione un cliente');
       return;
@@ -133,7 +146,6 @@ export class Ventas implements OnInit {
       alert('Ingrese un precio válido');
       return;
     }
-
 
     this.ventasService.registrar(this.formVenta).subscribe({
       next: () => {
@@ -155,6 +167,4 @@ export class Ventas implements OnInit {
       },
     });
   }
-
-
 }

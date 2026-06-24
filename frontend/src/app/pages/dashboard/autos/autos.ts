@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -27,7 +27,12 @@ export class AutosComponent {
   mostrarFormulario = false;
   editando = false;
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef,
+  ) {}
+
+  ngOnInit() {
     this.cargar();
   }
 
@@ -35,6 +40,7 @@ export class AutosComponent {
     this.http.get<any[]>('http://localhost:8082/autos').subscribe({
       next: (data) => {
         this.autos = data;
+        this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Error al cargar autos:', err);

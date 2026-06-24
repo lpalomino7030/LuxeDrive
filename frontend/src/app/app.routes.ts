@@ -11,7 +11,7 @@ import { Nosotros } from './pages/landing/Nosotros/nosotros';
 import { Contenido } from './pages/dashboard/contenido/contenido';
 import { Panel } from './pages/client/panel/panel';
 import { Catalogo } from './pages/landing/catalogo/catalogo';
-import { ClientesComponent } from './pages/clientes/clientes.component';
+import { ClientesComponent } from './pages/dashboard/clientes/clientes.component';
 import { Ventas } from './pages/dashboard/ventas/ventas';
 
 export const routes: Routes = [

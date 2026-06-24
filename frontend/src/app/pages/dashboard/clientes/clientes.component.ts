@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClienteService } from '../../services/cliente.service';
-import { Cliente } from '../../models/cliente';
+import { ClienteService } from '../../../services/cliente.service';
+import { Cliente } from '../../../models/cliente';
 import { Observable } from 'rxjs';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TituloEncabezado } from '../titulo-encabezado/titulo-encabezado';
 
 @Component({
   selector: 'app-clientes',
   standalone: true,
   templateUrl: './clientes.component.html',
   styleUrl: './clientes.component.css',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, TituloEncabezado],
 })
 export class ClientesComponent implements OnInit {
   formCliente!: FormGroup;
