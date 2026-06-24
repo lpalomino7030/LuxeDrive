@@ -30,3 +30,5 @@ VALUES
     ('Chevrolet', 'Onix', 'MNO-654', 2023, 18000.00, 'Azul', 'Hatchback', 'Reservado', 'onix.jpg');
 
 
+
+SELECT * FROM AUTOS;

@@ -2,7 +2,35 @@ CREATE DATABASE Clientes;
 
 CREATE TABLE clientes (idClientes SERIAL NOT NULL,nombre VARCHAR(100) NOT NULL,apellido VARCHAR(100) NOT NULL,dni VARCHAR(15) NOT NULL UNIQUE,CONSTRAINT PK_CLIENTES PRIMARY KEY (idClientes));
 
-insert into clientes (nombre, apellido, dni) VALUES ('luis', 'palomino','70305513')
+INSERT INTO clientes (nombre, apellido, dni) VALUES ('luis', 'palomino','70305513'),
+                                                 ('Carlos', 'Ramírez', '70123456'),
+                                                 ('Ana', 'Torres', '70123457'),
+                                                 ('José', 'Mendoza', '70123458'),
+                                                 ('María', 'López', '70123459'),
+                                                 ('Pedro', 'García', '70123460'),
+                                                 ('Laura', 'Castro', '70123461'),
+                                                 ('Diego', 'Flores', '70123462'),
+                                                 ('Sofía', 'Herrera', '70123463'),
+                                                 ('Miguel', 'Vargas', '70123464'),
+                                                 ('Valeria', 'Rojas', '70123465'),
+                                                 ('Andrés', 'Navarro', '70123466'),
+                                                 ('Camila', 'Silva', '70123467'),
+                                                 ('Ricardo', 'Pérez', '70123468'),
+                                                 ('Daniela', 'Ortiz', '70123469'),
+                                                 ('Fernando', 'Ruiz', '70123470'),
+                                                 ('Paula', 'Vega', '70123471'),
+                                                 ('Gabriel', 'Morales', '70123472'),
+                                                 ('Lucía', 'Reyes', '70123473'),
+                                                 ('Alberto', 'Santos', '70123474'),
+                                                 ('Elena', 'Medina', '70123475'),
+                                                 ('Javier', 'Cruz', '70123476'),
+                                                 ('Patricia', 'Campos', '70123477'),
+                                                 ('Luis', 'Salazar', '70123478'),
+                                                 ('Natalia', 'Benítez', '70123479'),
+                                                 ('Kevin', 'Paredes', '70123480'),
+                                                 ('Rosa', 'Delgado', '70123481'),
+                                                 ('Marco', 'Fuentes', '70123482'),
+                                                 ('Andrea', 'León', '70123483'),
+                                                 ('Hugo', 'Márquez', '70123484'),
+                                                 ('Carmen', 'Valdivia', '70123485');
 
-
-SELECT * FROM clientes;
