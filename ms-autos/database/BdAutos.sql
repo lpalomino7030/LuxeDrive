@@ -13,9 +13,6 @@ CREATE TABLE AUTOS (
     imagen VARCHAR(255) NOT NULL,
     CONSTRAINT PK_AUTOS PRIMARY KEY (idAutos));
 
-
-
-
 INSERT INTO autos
 (marca, modelo, placa, anio, precio, color, tipo, estado, imagen)
 VALUES

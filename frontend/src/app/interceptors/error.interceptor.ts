@@ -10,13 +10,11 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
     catchError((error) => {
       console.error('ERROR HTTP GLOBAL:', error);
 
-      // 🔴 NO AUTHENTICATED
       if (error.status === 401) {
         localStorage.clear();
         router.navigate(['/login']);
       }
 
-      // 🔴 FORBIDDEN
       if (error.status === 403) {
         router.navigate(['/perfil']);
       }

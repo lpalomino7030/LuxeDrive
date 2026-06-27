@@ -76,9 +76,9 @@ export class Ventas implements OnInit {
   cargarClientes() {
     this.clienteService.listarClientes().subscribe({
       next: (data) => {
+        console.log('Clientes:', data);
         this.clientes = data;
-        this.cdr.detectChanges();
-      },
+        },
 
       error: (err) => {
         console.error(err);
